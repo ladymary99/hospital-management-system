@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>settings of Moral Hospital</title>
+    <link rel="stylesheet" href="style-css/settings.css" />
+    <link rel="icon" href="pictures/logo.png" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+     <!-- navbar started -->
+     <nav
+     class="navbar navbar-expand-lg navbar-light glass-navbar p-0 fixed-top"
+   >
+     <a class="navbar-brand mx-2" href="#">
+       <img src="pictures/logo.png" alt="Logo" width="40" height="40" class="mx-1" />
+       <img src="pictures/MORAL.png" alt="" width="80" height="40" />
+     </a>
+   </nav>
+   <!-- navbar finished -->
+   <div class="container-fluid">
+     <div class="row">
+       <!-- Sidebar started -->
+       <div
+         class="col-md-2 sidebar glass-sidebar fixed-side text-color "
+         id="sidebar"
+       >
+         <div class="profile text-center pt-3">
+           <img
+             src="pictures/admin.png"
+             alt="Profile"
+             class="rounded-circle mb-2"
+             width="55"
+           />
+           <div>
+            <h5 class="m-0">Mary</h5>
+            <p class="m-0 d-flex">Admin</p>
+          </div>
+          
+         </div>
+         <ul class="nav flex-column mt-1 fw-bold">
+           <li class="nav-item">
+             <a
+               href="admin-dashboard.html"
+               class="nav-link dashboard-item d-flex align-items-center"
+               id="dashboard"
+             >
+               <lord-icon
+                 src="https://cdn.lordicon.com/laqlvddb.json"
+                 trigger="hover"
+                 colors="primary:#45a8a2,secondary:#000000"
+                 style="width: 30px; height: 30px"
+               >
+               </lord-icon>
+               <i class="fas fa-home mx-2"></i>
+
+               <span>Dashboard</span>
+             </a>
+           </li>
+           <li class="nav-item">
+             <a
+               href="admin-reports.html"
+               class="nav-link dashboard-item d-flex align-items-center"
+               id="reports"
+             >
+               <lord-icon
+                 src="https://cdn.lordicon.com/wzwygmng.json"
+                 trigger="hover"
+                 colors="primary:#45a8a2,secondary:#000000"
+                 style="width: 30px; height: 30px"
+               >
+               </lord-icon>
+               <i class="fas fa-chart-bar mx-2"></i>
+               <span>Reports</span>
+             </a>
+           </li>
+           <li class="nav-item">
+             <a
+               href="admin-medical records.html"
+               class="nav-link dashboard-item d-flex align-items-center"
+               id="medicalRecords"
+             >
+               <lord-icon
+                 src="https://cdn.lordicon.com/ghhwiltn.json"
+                 trigger="hover"
+                 colors="primary:#45a8a2,secondary:#000000"
+                 style="width: 30px; height: 30px"
+               >
+               </lord-icon>
+               <i class="fas fa-file-medical mx-2"></i>
+               <span>Medical Records</span>
+             </a>
+           </li>
+           <li class="nav-item">
+             <a
+               href="admin-staff management.html"
+               class="nav-link dashboard-item d-flex align-items-center"
+               id="staffManagement"
+             >
+               <lord-icon
+                 src="https://cdn.lordicon.com/kndkiwmf.json"
+                 trigger="hover"
+                 colors="primary:#45a8a2,secondary:#000000"
+                 style="width: 30px; height: 30px"
+               >
+               </lord-icon>
+               <i class="fas fa-users mx-2"></i>
+               <span>Staff Management</span>
+             </a>
+           </li>
+           <li class="nav-item">
+             <a
+               href="admin-payment.html"
+               class="nav-link dashboard-item d-flex align-items-center"
+               id="payment"
+             >
+               <lord-icon
+                 src="https://cdn.lordicon.com/ofdfurqa.json"
+                 trigger="hover"
+                 colors="primary:#45a8a2,secondary:#000000"
+                 style="width: 30px; height: 30px"
+               >
+               </lord-icon>
+               <i class="fas fa-credit-card mx-2"></i>
+               <span>Payment</span>
+             </a>
+           </li>
+           <li class="nav-item">
+             <a
+               href="admin-perscription.html"
+               class="nav-link dashboard-item d-flex align-items-center"
+               id="prescription"
+             >
+               <lord-icon
+                 src="https://cdn.lordicon.com/msxofnso.json"
+                 trigger="hover"
+                 colors="primary:#45a8a2,secondary:#000000"
+                 style="width: 30px; height: 30px"
+               >
+               </lord-icon>
+               <i class="fas fa-prescription-bottle-alt mx-2"></i>
+               <span>Prescription</span>
+             </a>
+           </li>
+           <li class="nav-item">
+             <a
+               href="admin-settings.html"
+               class="nav-link dashboard-item d-flex align-items-center active"
+               id="settings"
+             >
+               <lord-icon
+                 src="https://cdn.lordicon.com/dmgxtuzn.json"
+                 trigger="hover"
+                 colors="primary:#45a8a2,secondary:#000000"
+                 style="width: 30px; height: 30px"
+               >
+               </lord-icon>
+               <i class="fas fa-cog mx-2"></i>
+               <span>Settings</span>
+             </a>
+           </li>
+           <li class="nav-item"></li>
+            <a
+              href="LogIn-page.html"
+              class="nav-link dashboard-item d-flex align-items-center"
+              id="logout"
+            >
+            <img
+            src="pictures/sign-out.svg"
+            alt=""
+            width="30px"
+            height="30px" />
+              <i class="fas fa-prescription-bottle-alt mx-2"></i>
+              <span>Log Out </span>
+            </a>
+          </li>
+         </ul>
+       </div>
+       <!-- Sidebar finished -->
+       <!-- main content started  -->
+       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 offset-md-2">
+        <!-- admin section started -->
+            <div class="greeting-section chart1">   
+                <img src="pictures/plus.png" alt="" class="buttonofadmin3">
+                <div class="admin-info d-flex">
+                    <img src="pictures/admin.png"  alt="Admin">
+                    <div class="admin-div ">
+                      <span>Admin</span><br>
+                      <span class="admin-name fw-bold">Maria </span>
+                    </div>
+                </div>
+                 <button type="reset" class="btn btn-secondary buttonofadmin2">change photo</button>
+                 <button type="submit" class="btn btn-secondary buttonofadmin ">log out</button>
+            </div>
+        <!-- admin section finished -->
+         <!-- button start -->
+        <div class="chart1">
+        <div class="buttons">
+            <button class="tab-button fw-bold active" onclick="showContent(1)">
+<lord-icon
+    src="https://cdn.lordicon.com/hrjifpbq.json"
+    trigger="hover"
+    colors="primary:#000000"
+    style="width:30px;height:30px">
+</lord-icon>personal details</button>
+            <button class="tab-button fw-bold" onclick="showContent(2)">
+                <lord-icon
+    src="https://cdn.lordicon.com/lznlxwtc.json"
+    trigger="hover"
+    colors="primary:#000000"
+    style="width:30px;height:30px">
+</lord-icon>notifactions</button>
+            <button class="tab-button fw-bold" onclick="showContent(3)">
+                <lord-icon
+    src="https://cdn.lordicon.com/xuyycdjx.json"
+    trigger="hover"
+    colors="primary:#000000"
+    style="width:30px;height:30px">
+</lord-icon>credit cards</button>
+            <button class="tab-button fw-bold" onclick="showContent(4)">
+                <lord-icon
+    src="https://cdn.lordicon.com/abvsilxn.json"
+    trigger="hover"
+    colors="primary:#000000"
+    style="width:30px;height:30px">
+</lord-icon>reset password</button>
+        </div>
+        <!-- button finished -->
+         <!-- information of buttons started -->
+          <!-- button one started -->
+        <div class="content" id="content-1">
+            <p>
+                                    <form>
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <label for="firstName" class="form-label">First Name</label>
+                                                <input type="text" class="form-control border-bottom" id="firstName" placeholder="Enter First Name">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="lastName" class="form-label">Last Name</label>
+                                                <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <label for="age" class="form-label">Age</label>
+                                                <input type="number" class="form-control" id="age" placeholder="Enter Age">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="email" class="form-label">Email ID</label>
+                                                <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <label for="gender" class="form-label">Gender</label>
+                                                <select id="gender" class="form-select">
+                                                    <option selected>Select</option><option value="female">Female</option>
+                                                    <option value="male">Male</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="mobile" class="form-label">Mobile Number</label>
+                                                <input type="text" class="form-control" id="mobile" placeholder="Enter Mobile Number">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <label for="bloodGroup" class="form-label">Blood Group</label>
+                                                <select id="bloodGroup" class="form-select">
+                                                    <option selected>Select</option>
+                                                    <option value="A+">A+</option>
+                                                    <option value="B+">B+</option>
+                                                    <option value="O+">O+</option>
+                                                    <option value="AB+">AB+</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="postalCode" class="form-label">Postal Code</label>
+                                                <input type="text" class="form-control" id="postalCode" placeholder="Enter Postal Code">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <label for="country" class="form-label">Country</label>
+                                                <input type="text" class="form-control" id="country" placeholder="Enter Country">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="city" class="form-label">City</label>
+                                                <input type="text" class="form-control" id="city" placeholder="Enter City">
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn" id="#show-more">Update</button>
+                                        <button type="reset" class="btn btn-secondary">Cancel</button>
+                                    </form>
+                </p>
+        </div>
+        <!-- button one finished -->
+         <!-- button two started -->
+        <div class="content" id="content-2" style="display: none;">
+            <p>
+                
+            </p>
+        </div>
+        <!-- button two finished -->
+         <!-- button three started -->
+        <div class="content" id="content-3" style="display: none;">
+            <p></p>
+        </div>
+        <!-- button three finished -->
+         <!-- button four started -->
+        <div class="content" id="content-4" style="display: none;">
+            <p class="d-flex justify-content-center align-items-center">
+                <form class="changepassword">
+                    <div class="row mb-3 ">
+                        <div class="col-md-6">
+                            <label for="currentPassword" class="form-label">current Password</label>
+                            <input type="password" class="form-control" id="currentPassword" placeholder="Enter current Password">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="newPassword" class="form-label">new Password</label>
+                            <input type="password" class="form-control" id="newPassword" placeholder="Enter new Password">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="confirmPassword" class="form-label">Confirm new password</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder=" Confirm new password">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn" id="#show-more">Update</button>
+                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                </form>    
+            </p>
+        </div>
+        <!-- button four finished -->
+    </div>
+    <!-- information of buttons finished -->
+        </div>
+        
+       </main>
+  </div>
+        <!-- Bootstrap JS -->
+         <!-- all javascript links  -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <script src="javascript/settings.js"></script>
+      </body>
+    </html>
+  </body>
+</html>

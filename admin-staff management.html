@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style-css/staff management.css" />
+    <link rel="icon" href="pictures/logo.png" />
+    <title>Staff Management of Moral Hospital</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light glass-navbar p-0 fixed-top"
+    >
+      <a class="navbar-brand mx-2" href="#">
+        <img
+          src="pictures/logo.png"
+          alt="Logo"
+          width="40"
+          height="40"
+          class="mx-1"
+        />
+        <img src="pictures/MORAL.png" alt="" width="80" height="40" />
+      </a>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div
+          class="col-md-2 sidebar glass-sidebar fixed-side text-color"
+          id="sidebar"
+        >
+          <div class="profile text-center pt-3">
+            <img
+              src="pictures/admin.png"
+              alt="Profile"
+              class="rounded-circle mb-2"
+              width="55"
+            />
+
+            <div>
+              <h5 class="m-0">Mary</h5>
+              <p class="m-0 d-flex">Admin</p>
+            </div>
+          </div>
+          <ul class="nav flex-column mt-1 fw-bold">
+            <li class="nav-item">
+              <a
+                href="admin-dashboard.html"
+                class="nav-link dashboard-item d-flex align-items-center"
+                id="dashboard"
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/laqlvddb.json"
+                  trigger="hover"
+                  colors="primary:#45a8a2,secondary:#000000"
+                  style="width: 30px; height: 30px"
+                >
+                </lord-icon>
+                <i class="fas fa-home mx-2"></i>
+
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="admin-reports.html"
+                class="nav-link dashboard-item d-flex align-items-center"
+                id="reports"
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/wzwygmng.json"
+                  trigger="hover"
+                  colors="primary:#45a8a2,secondary:#000000"
+                  style="width: 30px; height: 30px"
+                >
+                </lord-icon>
+                <i class="fas fa-chart-bar mx-2"></i>
+                <span>Reports</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="admin-medical records.html"
+                class="nav-link dashboard-item d-flex align-items-center"
+                id="medicalRecords"
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/ghhwiltn.json"
+                  trigger="hover"
+                  colors="primary:#45a8a2,secondary:#000000"
+                  style="width: 30px; height: 30px"
+                >
+                </lord-icon>
+                <i class="fas fa-file-medical mx-2"></i>
+                <span>Medical Records</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="admin-staff management.html"
+                class="nav-link dashboard-item d-flex align-items-center active"
+                id="staffManagement"
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/kndkiwmf.json"
+                  trigger="hover"
+                  colors="primary:#45a8a2,secondary:#000000"
+                  style="width: 30px; height: 30px"
+                >
+                </lord-icon>
+                <i class="fas fa-users mx-2"></i>
+                <span>Staff Management</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="admin-payment.html"
+                class="nav-link dashboard-item d-flex align-items-center"
+                id="payment"
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/ofdfurqa.json"
+                  trigger="hover"
+                  colors="primary:#45a8a2,secondary:#000000"
+                  style="width: 30px; height: 30px"
+                >
+                </lord-icon>
+                <i class="fas fa-credit-card mx-2"></i>
+                <span>Payment</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="admin-perscription.html"
+                class="nav-link dashboard-item d-flex align-items-center"
+                id="prescription"
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/msxofnso.json"
+                  trigger="hover"
+                  colors="primary:#45a8a2,secondary:#000000"
+                  style="width: 30px; height: 30px"
+                >
+                </lord-icon>
+                <i class="fas fa-prescription-bottle-alt mx-2"></i>
+                <span>Prescription</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="admin-settings.html"
+                class="nav-link dashboard-item d-flex align-items-center"
+                id="settings"
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/dmgxtuzn.json"
+                  trigger="hover"
+                  colors="primary:#45a8a2,secondary:#000000"
+                  style="width: 30px; height: 30px"
+                >
+                </lord-icon>
+                <i class="fas fa-cog mx-2"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+            <li class="nav-item"></li>
+              <a
+                href="LogIn-page.html"
+                class="nav-link dashboard-item d-flex align-items-center"
+                id="logout"
+              >
+              <img
+              src="pictures/sign-out.svg"
+              alt=""
+              width="30px"
+              height="30px" />
+                <i class="fas fa-prescription-bottle-alt mx-2"></i>
+                <span>Log Out </span>
+              </a>
+            </li>
+          </ul>
+         
+        </div>
+
+        <!-- Main content -->
+        <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4 content">
+          <div class="chart1">
+            <h3>Staff List</h3>
+            <!-- Search Input -->
+            <div class="mb-3">
+              <input
+                type="text"
+                id="searchInput"
+                class="form-control"
+                placeholder="Search staff..."
+              />
+            </div>
+
+            <table
+              class="table table-bordered table-hover staff-list"
+              id="staffTable"
+            >
+              <thead class="table-light">
+                <tr>
+                  <th>No.</th>
+                  <th>Photo</th>
+                  <th>Name</th>
+                  <th>Mobile</th>
+                  <th>Designation</th>
+                  <th>Email</th>
+                  <th>DOJ</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#574</td>
+                  <td>
+                    <img
+                      src="pictures/ranni.webp"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Ranni</td>
+                  <td>78293847</td>
+                  <td>Nurse</td>
+                  <td>Ranni-theWitch@gmail.com</td>
+                  <td>02/09/2014</td>
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>#575</td>
+                  <td>
+                    <img
+                      src="pictures/Malenia.jpg"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Malenia</td>
+                  <td>78293847</td>
+                  <td>Nurse</td>
+                  <td>Malenia-bladeOfMiquella@gmail.com</td>
+                  <td>02/09/2014</td>
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>#576</td>
+                  <td>
+                    <img
+                      src="pictures/Godfrey.webp"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Godfrey</td>
+                  <td>78293847</td>
+                  <td>Doctor</td>
+                  <td>Godfrey@gmail.com</td>
+                  <td>02/11/2014</td>
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>#577</td>
+                  <td>
+                    <img
+                      src="pictures/Radagon.jpg"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Radagon</td>
+                  <td>78293847</td>
+                  <td>Doctor</td>
+                  <td>Radagon@gmail.com</td>
+                  <td>02/09/2014</td>
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>#578</td>
+                  <td>
+                    <img
+                      src="pictures/Queen Marika.jpg"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Queen Marika</td>
+                  <td>78293847</td>
+                  <td>Nurse</td>
+                  <td>Queen-Marika@gmail.com</td>
+                  <td>02/10/2014</td>
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>#579</td>
+                  <td>
+                    <img
+                      src="pictures/Radahn.webp"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Radahn</td>
+                  <td>78293847</td>
+                  <td>Nurse</td>
+                  <td>Radahn@gmail.com</td>
+                  <td>02/09/2014</td>
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>#580</td>
+                  <td>
+                    <img
+                      src="pictures/Mohg.jpg"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Mohg</td>
+                  <td>78293847</td>
+                  <td>Doctor</td>
+                  <td>mohg-lordOfBlood@gmail.com</td>
+                  <td>02/11/2014</td>
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>#581</td>
+                  <td>
+                    <img
+                      src="pictures/Morgott.jpg"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Morgott</td>
+                  <td>78293847</td>
+                  <td>Doctor</td>
+                  <td>Morgott-theOmenKing@gmail.com</td>
+                  <td>02/09/2014</td>
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>#582</td>
+                  <td>
+                    <img
+                      src="pictures/melina.jpg"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Melina</td>
+                  <td>78293847</td>
+                  <td>Nurse</td>
+                  <td>Melina@gmail.com</td>
+                  <td>02/10/2014</td>
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Add Staff Member Form -->
+          <h3 class="pt-4">Add Staff Member</h3>
+          <form>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="firstName" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="Enter first name"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Enter last name"
+                />
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="mobileNumber" class="form-label"
+                  >Mobile Number</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="mobileNumber"
+                  placeholder="Enter mobile number"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="dob" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" />
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="qualification" class="form-label"
+                  >Qualification</label
+                ><input
+                  type="text"
+                  class="form-control"
+                  id="qualification"
+                  placeholder="Enter qualification"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="designation" class="form-label">Designation</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="designation"
+                  placeholder="Enter designation"
+                />
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="gender" class="form-label">Gender</label>
+                <div>
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                  />
+                  <label for="female">Female</label>
+                  <input type="radio" id="male" name="gender" value="male" />
+                  <label for="male">Male</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="department" class="form-label">Department</label>
+                <select id="department" class="form-select">
+                  <option selected>Select</option>
+                  <option value="1">Neurology</option>
+                  <option value="2">Ophthalmology</option>
+                  <option value="3">Nuclear Magnetic</option>
+                  <option value="3">X-Ray</option>
+                  <option value="3">Surgical</option>
+                  <option value="3">Cardiology</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="address" class="form-label">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  placeholder="Enter address"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="city" class="form-label">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="city"
+                  placeholder="Enter city"
+                />
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="postalCode" class="form-label">Postal Code</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="postalCode"
+                  placeholder="Enter postal code"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="country" class="form-label">Country</label>
+                <select id="country" class="form-select">
+                  <option selected>Afghanistan</option>
+                  <option selected>armenia</option>
+                  <option selected>azerbaijan</option>
+                  <option selected>bahrain</option>
+                  <option selected>bangladesh</option>
+                  <option selected>bhutan</option>
+                  <option selected>brunei</option>
+                  <option selected>cambodia</option>
+                  <option selected>china</option>
+                  <option selected>cyprus</option>
+                  <option selected>georgia</option>
+                  <option selected>india</option>
+                  <option selected>indonesia</option>
+                  <option selected>iran</option>
+                  <option selected>iraq</option>
+                  <option selected>japan</option>
+                  <option selected>Select</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-end">
+              <button type="reset" class="btn btn-secondary me-2">
+                Cancel
+              </button>
+              <button type="submit" class="btn" id="show-more">
+                Add Staff Member
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="javascript/medical records.js"></script>
+  </body>
+</html>

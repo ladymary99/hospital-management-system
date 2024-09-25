@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.glass-navbar {
+  background: rgba(248, 241, 241, 0.582);
+  backdrop-filter: blur(10px);
+}
+/* style of dashboard */
+.sidebar {
+  position: fixed;
+  top: 44px;
+  left: 0;
+  height: calc(100% - 48px);
+  width: 215px;
+  color: black;
+  transition: width 0.3s ease;
+}
+
+.glass-sidebar {
+  background: rgba(248, 241, 241, 0.582);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+.sidebar .profile img {
+  margin-right: 15px;
+}
+
+.sidebar .nav-link {
+  font-size: 0.9rem;
+  color: black;
+  display: block;
+  white-space: nowrap;
+}
+.sidebar .nav-link:hover {
+  color: #45a8a2;
+}
+.sidebar .nav-link.active {
+  color: #45a8a2;
+}
+.active-item {
+  color: #45a8a2 !important;
+}
+h5 {
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+.logout {
+  padding-top: 100px;
+}
+@media (max-width: 768px) {
+  #sidebar {
+    width: 50px;
+  }
+  .sidebar .profile {
+    flex-direction: column;
+  }
+  .sidebar .profile img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+  }
+  .sidebar .profile h5 {
+    display: none;
+  }
+  .sidebar .nav-link {
+    padding-left: 0;
+  }
+  .sidebar .nav-link i {
+    margin-right: 0;
+  }
+  .sidebar .nav-link span {
+    display: none;
+  }
+}
+.card {
+  padding: 50px;
+  margin: 5px;
+  border: none;
+}
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.icon-p {
+  background-color: #45a8a2;
+  border-radius: 50%;
+  border: 4px dashed #429b95;
+  width: 95px;
+  height: 70px;
+  margin: 5px;
+}
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
+.graph {
+  height: 300px;
+  width: 100%;
+  background-color: #fff;
+}
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline li {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+.timeline li .time {
+  font-size: 0.85rem;
+  color: gray;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+  }
+  .graph {
+    height: 200px;
+  }
+}
+.content {
+  padding: 60px;
+}
+.chart1 {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.staff-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .staff-list th,
+  .staff-list td {
+    padding: 5px;
+    font-size: 12px;
+  }
+  .staff-photo {
+    width: 30px;
+    height: 30px;
+  }
+}
+.btn {
+  border: 1px solid blue;
+}
+.btn2 {
+  border: 1px solid red;
+}
+/* Custom form styling */
+form {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels and inputs spacing */
+table {
+  border-collapse: separate;
+  border: 1px solid black;
+  border-radius: 17px;
+}
+.table2 {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+td,
+th {
+  border: none;
+}
+form .form-label {
+  font-weight: bold;
+}
+
+form .form-control,
+form .form-select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+}
+
+/* Button styling */
+form button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+form button[type="reset"] {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+}
+
+form button[type="reset"]:hover {
+  background-color: #8f9294;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  form {
+    padding: 10px;
+  }
+}
+#show-more {
+  background-color: #2e9175;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+#show-more:hover {
+  background-color: #22b68c;
+  transform: scale(1.05);
+}

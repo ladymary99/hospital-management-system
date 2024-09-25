@@ -1,0 +1,188 @@
+.navbar-nav .nav-link {
+  color: black;
+}
+.glass-navbar {
+  background: rgba(225, 225, 225, 0.2);
+  backdrop-filter: blur(10px);
+}
+.navbar-nav .nav-link:hover {
+  color: #2e9175;
+}
+.navbar-nav .nav-link.active {
+  color: #2e9175;
+}
+/*services style*/
+
+.services-heading {
+  width: 400px;
+  margin-left: 5%;
+}
+
+.service-card {
+  background: linear-gradient(to right, #55b1ab, #4e8f8b);
+  color: white;
+  border-radius: 17px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h4 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-family: kadwa;
+}
+
+.service-card p {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    margin-bottom: 20px;
+  }
+}
+/* departments section */
+.departments-section {
+  background-color: #f0f0f0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  font-family: kadwa;
+}
+
+.underline {
+  width: 100px;
+  height: 4px;
+  background-color: #2e9175;
+  margin-top: 5px;
+}
+
+.department-buttons {
+  width: 200px;
+}
+
+.department-btn {
+  background-color: #2e9175;
+  color: white;
+  border: none;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.btn-top {
+  border-radius: 7px 7px 0px 0px;
+}
+.btn-bottom {
+  border-radius: 0px 0px 7px 7px;
+}
+
+.department-btn:hover {
+  transform: scale(1.05);
+}
+
+.department-btn:focus {
+  transform: scale(1.1);
+  outline: none;
+}
+/* information of departments*/
+.info-card {
+  color: black;
+  border-radius: 5px;
+}
+
+.info-card h3 {
+  font-weight: bold;
+}
+
+.info-card p {
+  margin-top: 10px;
+}
+
+/* images */
+.department-images {
+  display: none;
+}
+
+.department-images img {
+  width: 90%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+.col-md-5 {
+  padding-left: 0;
+  padding-right: 0;
+}
+#image1 {
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  #department-title {
+    font-size: 24px;
+  }
+  #department-description {
+    font-size: 14px;
+  }
+  img {
+    margin-bottom: 20px;
+  }
+}
+
+/* Show More buttun */
+#show-more {
+  background-color: #2e9175;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+#show-more:hover {
+  background-color: #22b68c;
+  transform: scale(1.05);
+}
+.footer {
+  background-color: #eeeeee;
+}
+
+.footer h4,
+.footer h5 {
+  font-weight: bold;
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+.footer i {
+  font-size: 18px;
+}
+
+.footer p {
+  font-size: 17px;
+  color: #acabab;
+}
+
+/* Style for the social icons tooltip */
+.social-icon {
+  position: relative;
+}
+
+.social-icon::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  display: none;
+}
+
+.social-icon:hover::before {
+  display: block;
+}

@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style-css/perscription.css" />
+    <link rel="icon" href="pictures/logo.png" />
+    <title>perscription of Moral Hospital</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light glass-navbar p-0 fixed-top"
+    >
+      <a class="navbar-brand mx-2" href="#">
+        <img
+          src="pictures/logo.png"
+          alt="Logo"
+          width="40"
+          height="40"
+          class="mx-1"
+        />
+        <img src="pictures/MORAL.png" alt="" width="80" height="40" />
+      </a>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div
+          class="col-md-2 sidebar glass-sidebar fixed-side text-color"
+          id="sidebar"
+        >
+          <div class="profile text-center pt-3">
+            <img
+              src="pictures/admin.png"
+              alt="Profile"
+              class="rounded-circle mb-2"
+              width="55"
+            />
+
+            <div>
+              <h5 class="m-0">Mary</h5>
+              <p class="m-0 d-flex">Admin</p>
+            </div>
+          </div>
+          <ul class="nav flex-column mt-1 fw-bold">
+            <li class="nav-item">
+              <a
+                href="admin-dashboard.html"
+                class="nav-link dashboard-item d-flex align-items-center"
+                id="dashboard"
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/laqlvddb.json"
+                  trigger="hover"
+                  colors="primary:#45a8a2,secondary:#000000"
+                  style="width: 30px; height: 30px"
+                >
+                </lord-icon>
+                <i class="fas fa-home mx-2"></i>
+
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="admin-reports.html"
+                class="nav-link dashboard-item d-flex align-items-center"
+                id="reports"
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/wzwygmng.json"
+                  trigger="hover"
+                  colors="primary:#45a8a2,secondary:#000000"
+                  style="width: 30px; height: 30px"
+                >
+                </lord-icon>
+                <i class="fas fa-chart-bar mx-2"></i>
+                <span>Reports</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="admin-medical records.html"
+                class="nav-link dashboard-item d-flex align-items-center"
+                id="medicalRecords"
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/ghhwiltn.json"
+                  trigger="hover"
+                  colors="primary:#45a8a2,secondary:#000000"
+                  style="width: 30px; height: 30px"
+                >
+                </lord-icon>
+                <i class="fas fa-file-medical mx-2"></i>
+                <span>Medical Records</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="admin-staff management.html"
+                class="nav-link dashboard-item d-flex align-items-center"
+                id="staffManagement"
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/kndkiwmf.json"
+                  trigger="hover"
+                  colors="primary:#45a8a2,secondary:#000000"
+                  style="width: 30px; height: 30px"
+                >
+                </lord-icon>
+                <i class="fas fa-users mx-2"></i>
+                <span>Staff Management</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="admin-payment.html"
+                class="nav-link dashboard-item d-flex align-items-center"
+                id="payment"
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/ofdfurqa.json"
+                  trigger="hover"
+                  colors="primary:#45a8a2,secondary:#000000"
+                  style="width: 30px; height: 30px"
+                >
+                </lord-icon>
+                <i class="fas fa-credit-card mx-2"></i>
+                <span>Payment</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="admin-perscription.html"
+                class="nav-link dashboard-item d-flex align-items-center active"
+                id="prescription"
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/msxofnso.json"
+                  trigger="hover"
+                  colors="primary:#45a8a2,secondary:#000000"
+                  style="width: 30px; height: 30px"
+                >
+                </lord-icon>
+                <i class="fas fa-prescription-bottle-alt mx-2"></i>
+                <span>Prescription</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="admin-settings.html"
+                class="nav-link dashboard-item d-flex align-items-center"
+                id="settings"
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/dmgxtuzn.json"
+                  trigger="hover"
+                  colors="primary:#45a8a2,secondary:#000000"
+                  style="width: 30px; height: 30px"
+                >
+                </lord-icon>
+                <i class="fas fa-cog mx-2"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+            <li class="nav-item"></li>
+            <a
+              href="LogIn-page.html"
+              class="nav-link dashboard-item d-flex align-items-center"
+              id="logout"
+            >
+            <img
+            src="pictures/sign-out.svg"
+            alt=""
+            width="30px"
+            height="30px" />
+              <i class="fas fa-prescription-bottle-alt mx-2"></i>
+              <span>Log Out </span>
+            </a>
+          </li>
+          </ul>
+        </div>
+         <!-- Main content -->
+         <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4 content">
+           <!-- Patient Info -->
+           <div class="card chart1">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex">
+                <span
+                  class="icon-p d-flex justify-content-center align-items-center"
+                  ><img src="pictures/user-6-30.png" alt=""
+                /></span>
+                <div class="row">
+                  <h4>Carole</h4>
+                  <p>Patient Name</p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <span
+                  class="icon-p d-flex justify-content-center align-items-center"
+                  ><img src="pictures/female-30.png" alt=""
+                /></span>
+                <div class="row">
+                  <h4>Female</h4>
+                  <p>Gender</p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <span
+                  class="icon-p d-flex justify-content-center align-items-center"
+                  ><img
+                    src="pictures/arrow-131-30.png"
+                    alt=""
+                    class="align-items-center"
+                /></span>
+                <div class="row">
+                  <h4>20</h4>
+                  <p>Age</p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <span
+                  class="icon-p d-flex justify-content-center align-items-center"
+                  ><img
+                    src="pictures/water-30.png"
+                    alt=""
+                    class="align-items-center"
+                /></span>
+                <div class="row">
+                  <h4>O+</h4>
+                  <p>Blood Type</p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <span
+                  class="icon-p d-flex justify-content-center align-items-center"
+                  ><img
+                    src="pictures/stethoscope-30.png"
+                    alt=""
+                    class="align-items-center"
+                /></span>
+                <div class="row">
+                  <h4>Dr. David</h4>
+                  <p>Consulting Doctor</p>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <img
+                  src="pictures/Queen Marika.jpg"
+                  alt="Doctor Image"
+                  class="profile-img"
+                />
+              </div>
+            </div>
+          </div>
+            <!-- BP and Sugar Levels -->
+          <div class="row mb-4">
+            <div class="col-md-6 chart1 my-4">
+              <div class="text-center">
+                <h5>BP Levels</h5>
+                <canvas id="myChart" width="400" height="150"></canvas>
+                <table class="table table-bordered table2">
+                  <tbody>
+                      <tr>
+                        <td>18/03/2024</td>
+                        <td>180</td>
+                      </tr>
+                      <tr>
+                        <td>18/03/2024</td>
+                        <td>210</td>
+                      </tr>
+                      <tr>
+                        <td>18/03/2024</td>
+                        <td>110</td>
+                      </tr>
+                  </tbody>
+              </table>
+              </div>
+            </div>
+            
+            <div class="col-md-6 chart1 my-4">
+              <div class="text-center">
+                <h5>Sugar Levels</h5>
+                <canvas id="incomeChart" width="400" height="150"></canvas>
+                <table class="table table-bordered table2">
+                  <tbody>
+                      <tr>
+                        <td>18/03/2024</td>
+                        <td>180</td>
+                      </tr>
+                      <tr>
+                        <td>18/03/2024</td>
+                        <td>210</td>
+                      </tr>
+                      <tr>
+                        <td>18/03/2024</td>
+                        <td>110</td>
+                      </tr>
+                  </tbody>
+              </table>
+              </div>
+            </div>
+      </div>   
+          <!-- Doctor Visits -->
+        <div class="row mb-4">
+          <div class="col-md-6 chart1 my-2">
+              <h4>Doctor Visits</h4>
+              <table class="table table-bordered table-hover ">
+                  <thead class="table-light">
+                      <tr>
+                          <th>Doctor</th>
+                          <th>Date</th>
+                          <th>Department</th>
+                          <th>Reports</th>
+                          
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>
+                              <img src="pictures/doctorimg2.avif" class="rounded-circle me-2" alt="Doctor Image" width="50" height="50">
+                              Dr. Hector
+                          </td>
+                          <td>20/05/2024</td>
+                          <td>Dentist</td>
+                          <td>
+                              <button class="btn btn-primary">View Reports</button>
+                          </td>
+                          
+                      </tr>
+                      <tr>
+                          <td>
+                              <img src="pictures/doctorimg3.avif" class="rounded-circle me-2" alt="Doctor Image" width="50" height="50">
+                              Dr. Mitchel
+                          </td>
+                          <td>20/05/2024</td>
+                          <td>Urologist</td>
+                          <td>
+                              <button class="btn btn-primary">View Reports</button>
+                          </td>
+                         
+                      </tr>
+                      <tr>
+                          <td>
+                              <img src="pictures/doctor.jpg" class="rounded-circle me-2" alt="Doctor Image" width="50" height="50">
+                              Dr. Fermin
+                          </td>
+                          <td>18/03/2024</td>
+                          <td>Surgeon</td>
+                          <td>
+                              <button class="btn btn-primary">View Reports</button>
+                          </td>
+                        
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+          <!-- Reports -->
+          <div class="col-md-6 chart1 my-2">
+            <h4>Reports</h4>
+            <table class="table table-bordered table-hover "><thead class="table-light">
+                <tr>
+                    <th>#</th>
+                    <th>File</th>
+                    <th>Reports Link</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><img src="https://via.placeholder.com/30" alt="File Icon"></td>
+                    <td><a href="#">Reports 1 clinical documentation</a></td>
+                    <td>May-28, 2024</td>
+                    <td>
+                      <button class="btn btn-sm btn2">
+                        <lord-icon
+                          src="https://cdn.lordicon.com/drxwpfop.json"
+                          trigger="hover"
+                          colors="primary:#e83a30,secondary:#e83a30"
+                          style="width: 20px; height: 20px"
+                        >
+                        </lord-icon>
+                      </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="https://via.placeholder.com/30" alt="File Icon"></td>
+                    <td><a href="#">Reports 2 random files documentation</a></td>
+                    <td>Mar-20, 2024</td>
+                    <td>
+                      <button class="btn btn-sm btn2">
+                        <lord-icon
+                          src="https://cdn.lordicon.com/drxwpfop.json"
+                          trigger="hover"
+                          colors="primary:#e83a30,secondary:#e83a30"
+                          style="width: 20px; height: 20px"
+                        >
+                        </lord-icon>
+                      </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img src="https://via.placeholder.com/30" alt="File Icon"></td>
+                    <td><a href="#">Reports 3 glucose level complete report</a></td>
+                    <td>Feb-18, 2024</td>
+                    <td>
+                      <button class="btn btn-sm btn2">
+                        <lord-icon
+                          src="https://cdn.lordicon.com/drxwpfop.json"
+                          trigger="hover"
+                          colors="primary:#e83a30,secondary:#e83a30"
+                          style="width: 20px; height: 20px"
+                        >
+                        </lord-icon>
+                      </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+      </div>
+          <div class="row">
+            <!-- Health Activity -->
+            <div class="col-md-4 ">
+              <div class="card chart1">
+                  <h5>Health Activity</h5>
+                  <div class="card-body">
+                      <canvas id="genderChart" ></canvas>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Pharmacy -->
+          <div class="col-md-4 ">
+              <div class="card chart1">
+                  <h5>Pharmacy</h5>
+                  <div class="card-body text-center">
+                    <img src="pictures/pharmecy.png" alt="" width="260" height="260">
+                      <h3>$980</h3>
+                      <p>Average Spending</p>
+                      <p><span class="fw-bold">20%</span> up last month</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="col-md-4">
+              <div class="card chart1">
+                  <h5 class="">Timeline</h5>
+                  <div class="card-body">
+                      <ul class="timeline">
+                          <li>
+                              <span class="time">An Hour Ago</span>
+                              <br />
+                              <strong>Dr. Janie Mcdonald</strong> - sent a new prescription.<br>
+                              Medicine: Amoxicillin <br>
+                              <a href="#">Payment Link</a>
+                          </li>
+                          <li>
+                              <span class="time">An Hour Ago</span>
+                              <br />
+                              <strong>Dr. Hector Banks</strong> - uploaded a report.<br>
+                              Report: Lysmopril <br>
+                              <a href="#">Payment Link</a>
+                          </li>
+                          <li>
+                              <span class="time">An Hour Ago</span>
+                              <br />
+                              <strong>Dr. Deena Cooley</strong> - sent medecine details.<br>
+                              <a href="#">Payment Link</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          </div>
+          
+
+          <div class="chart1">
+            <h3>Patient List</h3>
+            <!-- Search Input -->
+            <div class="mb-3">
+              <input
+                type="text"
+                id="searchInput"
+                class="form-control"
+                placeholder="Search staff..."
+              />
+            </div>
+
+            <table
+              class="table table-bordered table-hover staff-list "
+              id="staffTable"
+            >
+              <thead class="table-light">
+                <tr>
+                  <th>No.</th>
+                  <th>Photo</th>
+                  <th>Name</th>
+                  <th>gender</th>
+                  <th>Age</th>
+                  <th>blood group</th>
+                  <th>treatment</th>
+                  <th>mobile</th>
+                  <th>Email</th>
+                  
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#574</td>
+                  <td>
+                    <img
+                      src="pictures/ranni.webp"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Ranni</td>
+                  <td>female</td>
+                  <td>20</td>
+                  <td>O+</td>
+                  <td>Diabetes</td>
+                  <td>78293847</td>
+                  <td>Ranni-theWitch@gmail.com</td>
+                  
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>#575</td>
+                  <td>
+                    <img
+                      src="pictures/Malenia.jpg"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Malenia</td>
+                  
+                  <td>female</td>
+                  <td>25</td>
+                  <td>O+</td>
+                  <td>Diabetes</td>
+                  <td>78293847</td>
+                 
+                  <td>Malenia-bladeOfMiquella@gmail.com</td>
+                  
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>#576</td>
+                  <td>
+                    <img
+                      src="pictures/Godfrey.webp"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Godfrey</td>
+                  <td>male</td>
+                  <td>40</td>
+                  <td>O+</td>
+                  <td>Diabetes</td>
+                  <td>78293847</td>
+                  
+                  <td>Godfrey@gmail.com</td>
+                 
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>#577</td>
+                  <td>
+                    <img
+                      src="pictures/Radagon.jpg"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Radagon</td>
+                  <td>male</td>
+                  <td>20</td>
+                  <td>O+</td>
+                  <td>Diabetes</td>
+                  <td>78293847</td>
+                  
+                  <td>Radagon@gmail.com</td>
+                
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>#578</td>
+                  <td>
+                    <img
+                      src="pictures/Queen Marika.jpg"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Queen Marika</td>
+                  <td>female</td>
+                  <td>20</td>
+                  <td>O+</td>
+                  <td>Diabetes</td>
+                  <td>78293847</td>
+                  
+                  <td>Queen-Marika@gmail.com</td>
+                 
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>#579</td>
+                  <td>
+                    <img
+                      src="pictures/Radahn.webp"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Radahn</td>
+                  <td>male</td>
+                  <td>20</td>
+                  <td>O+</td>
+                  <td>Diabetes</td>
+                  <td>78293847</td>
+                  <td>Radahn@gmail.com</td>
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>#580</td>
+                  <td>
+                    <img
+                      src="pictures/Mohg.jpg"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Mohg</td>
+                  <td>male</td>
+                  <td>20</td>
+                  <td>O+</td>
+                  <td>Diabetes</td>
+                  <td>78293847</td>
+                  <td>mohg-lordOfBlood@gmail.com</td>
+
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>#581</td>
+                  <td>
+                    <img
+                      src="pictures/Morgott.jpg"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Morgott</td>
+                  <td>male</td>
+                  <td>20</td>
+                  <td>O+</td>
+                  <td>Diabetes</td>
+                  <td>78293847</td>
+                  <td>Morgott-theOmenKing@gmail.com</td>
+                  
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>#582</td>
+                  <td>
+                    <img
+                      src="pictures/melina.jpg"
+                      alt="Staff Photo"
+                      class="staff-photo"
+                    />
+                  </td>
+                  <td>Melina</td>
+                  <td>female</td>
+                  <td>20</td>
+                  <td>O+</td>
+                  <td>Diabetes</td>
+                  <td>78293847</td>
+                  <td>Melina@gmail.com</td>
+                  
+                  <td>
+                    <button class="btn btn-sm btn2">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        colors="primary:#e83a30,secondary:#e83a30"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                    <button class="btn btn-sm">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/wuvorxbv.json"
+                        trigger="hover"
+                        colors="primary:#3080e8,secondary:#3080e8"
+                        style="width: 20px; height: 20px"
+                      >
+                      </lord-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Add Staff Member Form -->
+          <h3 class="pt-4">Add new patient</h3>
+          <form>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="firstName" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="Enter first name"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Enter last name"
+                />
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="mobileNumber" class="form-label"
+                  >Mobile Number</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="mobileNumber"
+                  placeholder="Enter mobile number"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="dob" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" />
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="qualification" class="form-label"
+                  >Doctor Name</label
+                ><input
+                  type="text"
+                  class="form-control"
+                  id="qualification"
+                  placeholder="Enter qualification"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="designation" class="form-label">Designation</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="designation"
+                  placeholder="Enter designation"
+                />
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="gender" class="form-label">Gender</label>
+                <div>
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                  />
+                  <label for="female">Female</label>
+                  <input type="radio" id="male" name="gender" value="male" />
+                  <label for="male">Male</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="address" class="form-label">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  placeholder="Enter address"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="city" class="form-label">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="city"
+                  placeholder="Enter city"
+                />
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="postalCode" class="form-label">Postal Code</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="postalCode"
+                  placeholder="Enter postal code"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="country" class="form-label">Country</label>
+                <select id="country" class="form-select">
+                  <option selected>Afghanistan</option>
+                  <option selected>armenia</option>
+                  <option selected>azerbaijan</option>
+                  <option selected>bahrain</option>
+                  <option selected>bangladesh</option>
+                  <option selected>bhutan</option>
+                  <option selected>brunei</option>
+                  <option selected>cambodia</option>
+                  <option selected>china</option>
+                  <option selected>cyprus</option>
+                  <option selected>georgia</option>
+                  <option selected>india</option>
+                  <option selected>indonesia</option>
+                  <option selected>iran</option>
+                  <option selected>iraq</option>
+                  <option selected>japan</option>
+                  <option selected>Select</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-end">
+              <button type="reset" class="btn btn-secondary me-2">
+                Cancel
+              </button>
+              <button type="submit" class="btn" id="show-more">
+                Add new patient
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <!-- all js links -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="javascript/perscription.js"></script>
+  </body>
+</html>

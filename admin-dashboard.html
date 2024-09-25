@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard of Moral Hospital</title>
+    <link rel="stylesheet" href="style-css/style-admin.css" />
+    <link rel="icon" href="pictures/logo.png" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+     <!-- navbar started -->
+     <nav
+     class="navbar navbar-expand-lg navbar-light glass-navbar p-0 fixed-top"
+   >
+     <a class="navbar-brand mx-2" href="#">
+       <img src="pictures/logo.png" alt="Logo" width="40" height="40" class="mx-1" />
+       <img src="pictures/MORAL.png" alt="" width="80" height="40" />
+     </a>
+   </nav>
+   <!-- navbar finished -->
+   <div class="container-fluid">
+     <div class="row">
+       <!-- Sidebar started -->
+       <div
+         class="col-md-2 sidebar glass-sidebar fixed-side text-color"
+         id="sidebar"
+       >
+         <div class="profile text-center pt-3">
+           <img
+             src="pictures/admin.png"
+             alt="Profile"
+             class="rounded-circle mb-2"
+             width="55"
+           />
+           <div>
+            <h5 class="m-0">Mary</h5>
+            <p class="m-0 d-flex">Admin</p>
+          </div>
+          
+         </div>
+         <ul class="nav flex-column mt-1 fw-bold">
+           <li class="nav-item">
+             <a
+               href="admin-dashboard.html"
+               class="nav-link dashboard-item d-flex align-items-center active"
+               id="dashboard"
+             >
+               <lord-icon
+                 src="https://cdn.lordicon.com/laqlvddb.json"
+                 trigger="hover"
+                 colors="primary:#45a8a2,secondary:#000000"
+                 style="width: 30px; height: 30px"
+               >
+               </lord-icon>
+               <i class="fas fa-home mx-2"></i>
+
+               <span>Dashboard</span>
+             </a>
+           </li>
+           <li class="nav-item">
+             <a
+               href="admin-reports.html"
+               class="nav-link dashboard-item d-flex align-items-center"
+               id="reports"
+             >
+               <lord-icon
+                 src="https://cdn.lordicon.com/wzwygmng.json"
+                 trigger="hover"
+                 colors="primary:#45a8a2,secondary:#000000"
+                 style="width: 30px; height: 30px"
+               >
+               </lord-icon>
+               <i class="fas fa-chart-bar mx-2"></i>
+               <span>Reports</span>
+             </a>
+           </li>
+           <li class="nav-item">
+             <a
+               href="admin-medical records.html"
+               class="nav-link dashboard-item d-flex align-items-center"
+               id="medicalRecords"
+             >
+               <lord-icon
+                 src="https://cdn.lordicon.com/ghhwiltn.json"
+                 trigger="hover"
+                 colors="primary:#45a8a2,secondary:#000000"
+                 style="width: 30px; height: 30px"
+               >
+               </lord-icon>
+               <i class="fas fa-file-medical mx-2"></i>
+               <span>Medical Records</span>
+             </a>
+           </li>
+           <li class="nav-item">
+             <a
+               href="admin-staff management.html"
+               class="nav-link dashboard-item d-flex align-items-center"
+               id="staffManagement"
+             >
+               <lord-icon
+                 src="https://cdn.lordicon.com/kndkiwmf.json"
+                 trigger="hover"
+                 colors="primary:#45a8a2,secondary:#000000"
+                 style="width: 30px; height: 30px"
+               >
+               </lord-icon>
+               <i class="fas fa-users mx-2"></i>
+               <span>Staff Management</span>
+             </a>
+           </li>
+           <li class="nav-item">
+             <a
+               href="admin-payment.html"
+               class="nav-link dashboard-item d-flex align-items-center"
+               id="payment"
+             >
+               <lord-icon
+                 src="https://cdn.lordicon.com/ofdfurqa.json"
+                 trigger="hover"
+                 colors="primary:#45a8a2,secondary:#000000"
+                 style="width: 30px; height: 30px"
+               >
+               </lord-icon>
+               <i class="fas fa-credit-card mx-2"></i>
+               <span>Payment</span>
+             </a>
+           </li>
+           <li class="nav-item">
+             <a
+               href="admin-perscription.html"
+               class="nav-link dashboard-item d-flex align-items-center"
+               id="prescription"
+             >
+               <lord-icon
+                 src="https://cdn.lordicon.com/msxofnso.json"
+                 trigger="hover"
+                 colors="primary:#45a8a2,secondary:#000000"
+                 style="width: 30px; height: 30px"
+               >
+               </lord-icon>
+               <i class="fas fa-prescription-bottle-alt mx-2"></i>
+               <span>Prescription</span>
+             </a>
+           </li>
+           <li class="nav-item">
+             <a
+               href="admin-settings.html"
+               class="nav-link dashboard-item d-flex align-items-center"
+               id="settings"
+             >
+               <lord-icon
+                 src="https://cdn.lordicon.com/dmgxtuzn.json"
+                 trigger="hover"
+                 colors="primary:#45a8a2,secondary:#000000"
+                 style="width: 30px; height: 30px"
+               >
+               </lord-icon>
+               <i class="fas fa-cog mx-2"></i>
+               <span>Settings</span>
+             </a>
+           </li>
+         </ul>
+       </div>
+       <!-- Sidebar finished -->
+       <!-- main content -->
+       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 offset-md-2">
+          <div class="greeting-section chart1"> 
+            <img src="pictures/plus.png" alt="" class="buttonofadmin3">  
+            <div class="admin-info d-flex">
+                <img src="pictures/admin.png"  alt="Admin">
+                <div class="admin-div">
+                  <span>Good Morning </span><br>
+                  <span class="admin-name fw-bold">Admin Maria</span>
+                </div>
+            </div>
+        </div> 
+      <!-- Your Schedule Today Section -->
+      <div class="row g-3 mb-4">
+          <h5 class="card-title p-4">Your Schedule Today</h5>
+          <div class="col-3">
+             <div class="info-card d-flex align-items-center"> 
+                <div class="icon-border">
+                  <lord-icon
+                     src="https://cdn.lordicon.com/qhyftkrp.json"
+                     trigger="hover"
+                     colors="primary:#121331,secondary:#000000"
+                     style="width:40px;height:40px"   
+                     >
+                 </lord-icon>
+                 </div>
+                 <div class="card-text ms-3">
+                    <h4>438</h4>
+                    <p>New Patients</p>
+                 </div>  
+              </div>
+          </div>
+          <div class="col-3">
+            <div class="info-card d-flex align-items-center"> 
+               <div class="icon-border">
+                 <lord-icon
+                    src="https://cdn.lordicon.com/wyqtxzeh.json"
+                    trigger="hover"
+                    colors="primary:#121331,secondary:#000000"
+                    style="width:40px;height:40px"   
+                    >
+                </lord-icon>
+                </div>
+                <div class="card-text ms-3">
+                   <h4>$90000</h4>
+                   <p>Total Earnings</p>
+                </div>  
+             </div>
+         </div>
+          <div class="col-3">
+            <div class="info-card d-flex align-items-center"> 
+              <div class="icon-border">
+                <lord-icon
+                   src="https://cdn.lordicon.com/lqcyrjta.json"
+                   trigger="hover"
+                   colors="primary:#121331,secondary:#000000"
+                   style="width:40px;height:40px" 
+                   >
+               </lord-icon>
+              </div>
+               <div class="card-text ms-3">
+                <h4>3460</h4>
+                <p>OPD Patients</p>
+               </div>  
+            </div>
+          </div>
+          <div class="col-3 ">
+            <div class="info-card d-flex align-items-center"> 
+              <div class="icon-border">
+              <lord-icon
+                 src="https://cdn.lordicon.com/hpcxqbph.json"
+                 trigger="hover"
+                 colors="primary:#121331,secondary:#000000"
+                 style="width:40px;height:40px"    
+                 >
+             </lord-icon>
+             </div>
+            <div class="card-text ms-3">
+              <h4>467</h4>
+              <p>ER Patients</p>
+             </div>  
+          </div>
+      </div>
+    </div>
+
+      <!-- Available Beds Section -->
+      <div class="row mb-4 chart1" >
+          <h5 >Available Beds</h5>
+              <canvas id="availableBedsChart" width="400" height="150"></canvas>
+      </div>
+
+      <!-- Insurance Claims Section -->
+      <div class="row mb-4 chart1">
+          <h5 >Insurance Claims</h5>
+              <canvas id="insuranceClaimsChart" width="400" height="150"></canvas>
+      </div><!-- Hospital Earnings Section -->
+      <div class="row hospital-earnings chart1 my-2">
+          <h5 class="p-3">Hospital Earnings</h5>
+          <div class="col-md-6">
+              <div class="earnings-item d-flex align-items-center">
+                  <i class="d-flex"><lord-icon
+                    src="https://cdn.lordicon.com/ajfmgpbq.json"
+                    trigger="hover"
+                    stroke="bold"
+                    colors="primary:#8930e8,secondary:#9ce5f4"
+                    style="width:50px;height:50px">
+                </lord-icon></i>
+                  <div>
+                      <h6>$4900</h6>
+                      <p>Online Consultation</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="earnings-item d-flex align-items-center">
+                  <i class="d-flex"><lord-icon
+                    src="https://cdn.lordicon.com/ajfmgpbq.json"
+                    trigger="hover"
+                    stroke="bold"
+                    colors="primary:#b0f0e0,secondary:#45a8a2"
+                    style="width:50px;height:50px">
+                </lord-icon></i>
+                  <div>
+                    
+
+                      <h6>$750</h6>
+                      <p>Overall Purchases</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="earnings-item d-flex align-items-center">
+                  <i class="d-flex">
+                    <lord-icon
+    src="https://cdn.lordicon.com/ajfmgpbq.json"
+    trigger="hover"
+    stroke="bold"
+    colors="primary:#3dc6c3,secondary:#3080e8"
+    style="width:50px;height:50px">
+</lord-icon>
+                  </i>
+                  <div>
+                      <h6>$560</h6>
+                      <p>Pending Invoices</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="earnings-item d-flex align-items-center">
+                  <i class="d-flex">
+                    <lord-icon
+    src="https://cdn.lordicon.com/ajfmgpbq.json"
+    trigger="hover"
+    stroke="bold"
+    colors="primary:#110a5c,secondary:#3080e8"
+    style="width:50px;height:50px">
+</lord-icon>
+                  </i>
+                  <div>
+                      <h6>$390</h6>
+                      <p>Monthly Billing</p>
+                  </div>
+              </div>
+          </div>
+        </div>
+       </main>
+  </div>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <script src="javascript/javascript-admin.js"></script>
+      </body>
+    </html>
+  </body>
+</html>
