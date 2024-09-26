@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(patientpage/pictures/bg.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.navbar-nav .nav-link {
+  color: black;
+}
+.glass-navbar {
+  background: rgba(225, 225, 225, 0.2);
+  backdrop-filter: blur(10px);
+}
+.navbar-nav .nav-link:hover {
+  color: #2e9175;
+}
+.navbar-nav .nav-link:active {
+  color: #2e9175;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+/* hello */
+.greeting-section {
+  background-color: rgba(255, 255, 255, 0.2);
+  /* background-color: rgba(46, 145, 117, 0.5);  */
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  align-items: center;
+  margin: 20px 60px;
+  /* margin-bottom: 20px;
+  margin-top: 20px; */
+}
+.greeting-section .patient-info {
+  align-items: center;
+}
+.greeting-section .patient-info img {
+  border-radius: 17px;
+  width: 100px;
+  height: 100px;
+}
+.greeting-section .patient-info h4 {
+  margin: 0;
+  color: black;
+}
+.patient-div {
+  margin-left: 10px;
+}
+/* helllo end */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  /* background-color: #f0f0f0; */
+  background-color: rgba(255, 255, 255, 0.2);
+  /* background-color: rgba(46, 145, 117, 0.5);  */
+  /* سبز شیشه‌ای با شفافیت 50% */
+  backdrop-filter: blur(10px);
+  margin: 0 60px;
+  border-radius: 8px;
+}
+
+.content {
+  max-width: 50%;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 15px;
+}
+
+.btn,
+.btn-secondary {
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn {
+  background-color: #2e9175;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #2e9175;
+  border: 2px solid #2e9175;
+  border-radius: 5px;
+}
+
+.btn-secondary:hover {
+  background-color: #2e9175;
+  color: white;
+}
+
+.image-container {
+  max-width: 45%;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .image-container {
+    max-width: 80%;
+    margin-top: 20px;
+  }
+}
+
+.custom-hr {
+  height: 5px; /* ضخامت خط */
+  background-color: black; /* رنگ خط */
+  border: none; /* حذف حاشیه */
+  margin: 0px 0; /* فاصله از بالا و پایین */
+}
+/* information style */
+.services-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+  /* background-color: #f0f0f0; */
+}
+
+.service-box {
+  width: 200px; /* عرض اصلی دیو */
+  padding: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2); /* پس‌زمینه شیشه‌ای */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px); /* فیلتر شیشه‌ای */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+  transform: scale(1.05); /* انیمیشن تغییر سایز در هاور */
+}
+
+.service-box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.services-grid img {
+  aspect-ratio: 1 / 1;
+}
+.services-grid a {
+  text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .service-box {
+    width: 100%; /* عرض دیوها در صفحه‌های کوچکتر */
+    max-width: 300px; /* حداکثر عرض برای جلوگیری از بزرگ شدن بیش از حد */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-box {
+    padding: 10px; /* کاهش padding در گوشی‌های کوچکتر */
+  }
+}
