@@ -1,0 +1,260 @@
+body {
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.appointment-form {
+  background: linear-gradient(to right, #55b1ab, #4e8f8b);
+  font-family: kadwa;
+  margin-top: 3%;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(17, 52, 35, 0.1);
+  width: 500px;
+  text-align: center;
+}
+
+.appointment-form h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+.appointment-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.appointment-form input[type="text"],
+.appointment-form input[type="email"],
+.appointment-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #eeeeee;
+  font-size: 14px;
+}
+
+.appointment-form input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.appointment-form .checkbox-label {
+  color: white;
+  font-size: 14px;
+}
+
+.appointment-form button {
+  background-color: #55b1ab;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.appointment-form button:hover {
+  background-color: #218838;
+}
+
+.calendar-container {
+    background-color: #eeeeee;
+    font-family: kadwa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    max-width: 500px; 
+    height: auto; 
+    margin: 8% auto;
+}
+
+.calendar-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.calendar div {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #eeeeee;
+}
+
+.calendar div:hover {
+    background-color: #78a39c;
+    color: white;
+}
+
+.calendar div.selected {
+    background-color: #54b689;
+    color: white;
+}
+
+.calendar .day-name {
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.appointment-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.appointment-info span {
+    font-weight: bold;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .calendar-container {
+        padding: 15px;
+        width: 90%; 
+        margin: 5% auto; 
+    }
+
+    .calendar-header h2 {
+        font-size: 22px;
+    }
+
+    .calendar {
+        gap: 8px; 
+    }
+
+    .calendar div {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-container {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .calendar-header h2 {
+        font-size: 18px; 
+    }
+
+    .calendar div {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .appointment-info {
+        font-size: 14px;
+    }
+}
+.time-appointment-container {
+    font-family: kadwa;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(22, 50, 37, 0.1);
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto; 
+  }
+  
+  h3 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .booking-grid {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .booking-slot {
+    text-align: center;
+    width: 30%; 
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon img {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  button {
+    background-color: #f4f4f4;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 20px;
+    color: #000000;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; 
+  }
+  
+  button:hover {
+    background-color: #55b1ab;
+  }
+  
+  .appointment-btn {
+    background-color: #D3D3D3;
+    height: 40px;
+    width: 300px;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 20px;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .appointment-btn:hover {
+    background-color: #55b1ab;
+  }
+  
+  @media (max-width: 768px) {
+    .booking-grid {
+      flex-direction: column; 
+      align-items: center;
+    }
+  
+    .booking-slot {
+      width: 100%;
+    }
+  }
+  .selected {
+    background-color: #55b1ab;
+    color: white;
+}

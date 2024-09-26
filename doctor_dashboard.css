@@ -1,0 +1,704 @@
+body {
+    height: 100vh;
+    background-image: url(Green\ Color\ Abstract\ Healthy\ Medical\ Background.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .glass-navbar {
+    background: rgba(248, 241, 241, 0.582);
+    backdrop-filter: blur(10px);
+  }
+  /* style of dashboard */
+  .sidebar {
+    position: fixed;
+    top: 44px;
+    left: 0;
+    height: calc(100% - 48px);
+    width: 215px;
+    color: black;
+    transition: width 0.3s ease;
+  }
+  
+  .glass-sidebar {
+    background: rgba(248, 241, 241, 0.582);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .sidebar .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid rgb(224, 224, 224);
+  }
+  .sidebar .profile img {
+    margin-right: 15px;
+  }
+  
+  .sidebar .nav-link {
+    font-size: 0.9rem;
+    color: black;
+    display: block;
+    white-space: nowrap;
+  }
+  .sidebar .nav-link:hover {
+    color: #45a8a2;
+  }
+  
+  .active-item {
+    color: #45a8a2 !important;
+  }
+  h5 {
+    font-size: 1.2rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 768px) {
+    #sidebar {
+      width: 50px;
+    }
+    .sidebar .profile {
+      flex-direction: column;
+    }
+    .sidebar .profile img {
+      width: 40px;
+      height: 40px;
+      margin-right: 0;
+    }
+    .sidebar .profile h5 {
+      display: none;
+    }
+    .sidebar .nav-link {
+      padding-left: 0;
+    }
+    .sidebar .nav-link i {
+      margin-right: 0;
+    }
+    .sidebar .nav-link span {
+      display: none;
+    }
+  }
+
+
+.doctor-dashboard {
+    background-image:url(Green\ Color\ Abstract\ Healthy\ Medical\ Background.jpeg);
+    font-family: kadwa;
+    display: flex;
+    align-items: center;
+    background-color: #55b1ab;
+    color: rgb(0, 0, 0);
+    padding: 17px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    margin-top: 26px;
+    margin-left: 430px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.doctor-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+    border: 2px solid #eeeeee;
+    object-fit: cover;
+}
+
+.doctor-info {
+    flex: 2;
+}
+
+.doctor-info h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.doctor-info p {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .doctor-dashboard {
+        margin-left: 0%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .doctor-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .doctor-info h2 {
+        font-size: 20px;
+    }
+
+    .doctor-info p {
+        font-size: 14px;
+    }
+}
+
+.dashboard {
+    font-family: kadwa;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 16px;
+    margin-top: 6%;
+    margin-left: 215px; /* این مارجین برای دسکتاپ است */
+}
+
+.card {
+   background-color: rgba(255, 255, 255, 0.2); 
+   border-radius: 15px; 
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px); 
+   border: 1px solid rgba(255, 255, 255, 0.3); 
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+   padding: 20px; 
+   width: calc(25% - 20px); /* چهار کارت در یک ردیف */
+   text-align: center;
+   transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card i {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.count {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.label {
+    font-size: 18px;
+}
+/* تنظیمات برای تبلت */
+@media (max-width: 768px) {
+    .dashboard {
+        margin-left: 50px; /* کاهش مارجین برای تبلت */
+        width: calc(100% - 50px); /* تنظیم عرض برای کارت‌ها */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: calc(50% - 15px); /* دو کارت در هر ردیف */
+        margin-bottom: 15px;
+    }
+}
+
+/* تنظیمات برای موبایل */
+@media (max-width: 480px) {
+    .dashboard {
+        margin-left: 20px; /* کاهش مارجین برای موبایل */
+        width: calc(100% - 20px); /* تنظیم عرض برای کارت‌ها */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: calc(50% - 10px); /* دو کارت در هر ردیف */
+        margin-bottom: 10px;
+    }
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ .circle-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+ }
+ .container {
+    width: 80%;
+    max-width: 1200px; 
+    margin: 60px auto;
+    margin-left: 215px; /* مارجین چپ برای دسکتاپ */
+    color: #000000;
+    padding: 20px;
+    font-family: kadwa;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* تنظیمات بارها */
+.bar {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    height: 20px;
+    width: 80%; 
+    margin: 0 auto;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.bar:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.bar span {
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgb(230, 239, 237) 0%, #55b1ab);
+}
+
+/* انیمیشن برای بارها */
+.year1 {
+    width: 90%;
+    animation: year1 3s;
+}
+
+.year2 {
+    width: 80%;
+    animation: year2 3s;
+}
+
+.year3 {
+    width: 65%;
+    animation: year3 3s;
+}
+
+.year4 {
+    width: 70%;
+    animation: year4 3s;
+}
+
+.year-text {
+    margin: 10px 90% 10px 0;
+}
+
+@keyframes year1 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes year2 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes year3 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 65%;
+    }
+}
+
+@keyframes year4 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+/* رسپانسیو برای تبلت */
+@media (max-width: 768px) {
+    .container {
+        margin-left: 10%; /* مارجین چپ متناسب با عرض صفحه */
+        width: 80%; /* عرض کانتینر با در نظر گرفتن سایدبار */
+        padding: 10px;
+    }
+
+    .bar {
+        width: 90%;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+}
+
+/* رسپانسیو برای موبایل */
+@media (max-width: 480px) {
+    .container {
+        margin-left: 5%; /* مارجین چپ متناسب با عرض صفحه */
+        width: 90%; /* تنظیم عرض کانتینر برای موبایل */
+        padding: 5px;
+    }
+
+    .bar {
+        width: 100%; 
+    }
+
+    h5 {
+        font-size: 14px;
+    }
+}
+.upcoming-appointment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    font-family: kadwa;
+}
+
+.appointment-card {
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 20px;
+    padding: 40px;
+    margin-left: 125px; /* فاصله مناسب از سایدبار */
+    width: 70%; 
+    max-width: 500px; 
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.appointment-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.avatar img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 28px;
+}
+
+.actions {
+    margin-top: 30px;
+}
+
+.actions button {
+    border: none;
+    padding: 12px 25px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.accept-btn {
+    background-color: #55b1ab;
+    color: white;
+}
+
+.accept-btn:hover {
+    background-color: #5dbab4;
+}
+
+.decline-btn {
+    background-color: #000;
+    color: white;
+}
+
+.decline-btn:hover {
+    background-color: #333;
+}
+
+/* Responsive design برای صفحه‌نمایش‌های کوچک‌تر */
+@media (max-width: 768px) {
+    .appointment-card {
+        margin-left: 0; /* حذف مارجین چپ برای صفحات کوچک‌تر */
+        width: 80%; /* عرض کارت در تبلت‌ها */
+    }
+}
+
+@media (max-width: 480px) {
+    .appointment-card {
+        margin-left: 0; /* حذف مارجین چپ برای موبایل */
+        width: 90%; /* عرض کارت در موبایل‌ها */
+        padding: 20px; /* کاهش padding برای هماهنگی بهتر */
+    }
+
+    h3 {
+        font-size: 1.8em; /* کوچک کردن عنوان */
+    }
+}
+
+.table-section {
+    margin-left: 100px; /* فضای خالی برای سایدبار در حالت عادی */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.styled-table {
+    font-family: kadwa;
+    width: 70%; /* کوچک‌تر کردن جدول برای لپ‌تاپ */
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 15px; /* اضافه کردن بوردر رادیوس */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px 0;
+    
+}
+
+.styled-table thead tr {
+    background-color: #55b1ab;
+    color: white;
+    text-align: left;
+}
+
+.styled-table th, .styled-table td {
+    padding: 10px 12px; /* کوچک‌تر کردن پدینگ برای فضا */
+    border: 1px solid #dddddd;
+    font-size: 0.9rem; /* کوچک‌تر کردن اندازه فونت */
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.styled-table button {
+    background-color: #55b1ab;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85rem; /* کوچک‌تر کردن دکمه */
+}
+
+.styled-table button:hover {
+    background-color:#48a098;
+}
+
+/* رسپانسیو برای تبلت */
+@media (max-width: 768px) {
+    .table-section {
+        margin-left: 18px; /* کاهش فضای خالی سایدبار */
+        padding: 0 10px;
+    }
+    .styled-table {
+        width: 90%; /* کوچک‌تر شدن جدول در تبلت */
+    }
+}
+
+/* رسپانسیو برای موبایل */
+@media (max-width: 480px) {
+    .table-section {
+        margin-left: 18px; /* فضای کمتر برای سایدبار */
+        padding: 0 5px;
+    }
+    .styled-table {
+        width: 100%; /* تمام‌عرض کردن جدول */
+        font-size: 0.8rem; /* کوچک‌تر کردن متن */
+    }
+
+    .styled-table th, .styled-table td {
+        padding: 8px; /* کوچک‌تر کردن پدینگ در موبایل */
+    }
+
+    .styled-table button {
+        padding: 5px 10px; /* کوچک‌تر کردن دکمه */
+        font-size: 0.8rem; /* کوچک‌تر کردن اندازه دکمه در موبایل */
+    }
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+    font-family: kadwa;
+    margin-left: 100px; /* حاشیه سمت چپ */
+    
+}
+
+.content {
+    flex-grow: 1;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px; /* اضافه کردن حاشیه اطراف */
+}
+
+/* Table Styling */
+/* اضافه کردن border-radius به جدول */
+.appointments-table {
+    width: 100%;
+    border-collapse: separate; /* تغییر از collapse به separate برای فعال کردن گوشه‌های گرد */
+    border-spacing: 0; /* حذف فاصله‌های بین سلول‌ها */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border-radius: 10px; /* گوشه‌های گرد برای جدول */
+    overflow: hidden; /* برای اینکه گوشه‌ها در داخل جدول نیز اعمال شوند */
+}
+
+.appointments-table thead {
+    background-color: #55b1ab;
+    color: white;
+    border-top-left-radius: 10px; /* گوشه‌های گرد بالا سمت چپ */
+    border-top-right-radius: 10px; /* گوشه‌های گرد بالا سمت راست */
+}
+
+.appointments-table th, .appointments-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ccc;
+}
+
+.appointments-table th:last-child, .appointments-table td:last-child {
+    border-right: none;
+}
+
+/* حذف گوشه‌های گرد پایین در سلول‌های میانی */
+.appointments-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px; /* گوشه گرد پایین سمت چپ */
+}
+
+.appointments-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px; /* گوشه گرد پایین سمت راست */
+}
+
+/* خطوط افقی بخش‌بخش */
+.appointments-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* رنگ متفاوت برای سطرهای فرد */
+}
+
+.appointments-table tbody tr:nth-child(even) {
+    background-color: #fff; /* رنگ سطرهای زوج */
+}
+
+.appointments-table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.appointments-table th {
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.view-btn {
+    padding: 8px 15px;
+    background-color: #55b1ab;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+    background-color: #48a098;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .main-container {
+        width: 100%;
+        margin-left: 20px; /* کاهش مارجین چپ به 20 پیکسل */
+        margin-right: 40px; /* افزایش مارجین راست به 40 پیکسل */
+        padding: 0 20px; /* تنظیم padding برای جلوگیری از چسبیدن کانتینر به لبه‌ها */
+    }
+
+    .content {
+        max-width: 85%; /* کانتینر 85 درصد از عرض صفحه را اشغال می‌کند */
+        margin: 0 auto; /* کانتینر را در وسط قرار می‌دهد */
+        padding: 10px;
+    }
+
+    .appointments-table th, .appointments-table td {
+        font-size: 0.9em; /* تنظیم اندازه متن مناسب برای تبلت */
+        padding: 10px;
+    }
+    
+    .view-btn {
+        padding: 6px 12px; /* اندازه مناسب برای دکمه‌ها */
+    }
+}
+
+/* برای دستگاه‌های موبایل (عرض کمتر از 768px) */
+@media (max-width: 767px) {
+    .main-container {
+        width: 100%;
+        margin-left: 15px; /* کاهش مارجین چپ به 15 پیکسل */
+        margin-right: 35px; /* افزایش مارجین راست به 35 پیکسل */
+        padding: 0 15px; /* اضافه کردن padding به چپ و راست برای جلوگیری از چسبیدن به لبه‌ها */
+    }
+
+    .content {
+        max-width: 95%; /* عرض کانتینر 95 درصد صفحه */
+        margin: 0 auto; /* کانتینر را در وسط قرار می‌دهد */
+        padding: 10px;
+    }
+
+    .appointments-table th, .appointments-table td {
+        font-size: 0.8em; /* کوچک‌تر کردن اندازه متن برای موبایل */
+        padding: 8px; /* کاهش padding سلول‌ها */
+    }
+
+    .view-btn {
+        padding: 5px 10px; /* تنظیم اندازه دکمه‌ها برای موبایل */
+    }
+}
