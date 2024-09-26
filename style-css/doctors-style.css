@@ -40,6 +40,19 @@ body {
 .navbar-nav .nav-link.active {
   color: #2e9175;
 }
+/* Show More buttun */
+#show-more {
+  background-color: #2e9175;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+#show-more:hover {
+  background-color: #22b68c;
+  transform: scale(1.05);
+}
 .btn-success:hover {
   background-color: #218838;
   border-color: #1e7e34;
