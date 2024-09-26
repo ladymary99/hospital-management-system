@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  background-image: url(pic/back.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* navbar style */
+.navbar-nav .nav-link {
+  color: black;
+}
+.glass-navbar {
+  background: rgba(225, 225, 225, 0.2);
+  backdrop-filter: blur(10px);
+}
+.navbar-nav .nav-link:hover {
+  color: #2e9175;
+}
+.navbar-nav .nav-link:active {
+  color: #2e9175;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/*title style*/
+.about-doctors {
+  width: 100%;
+  margin-left: 5%;
+  position: relative;
+  top: 30px;
+  color: #000;
+  text-align: center;
+}
+.ic {
+  position: absolute;
+  bottom: 2px;
+}
+.line {
+  width: 7%;
+  height: 3px;
+  background-color: #2e9175;
+  margin: 10px auto;
+  margin-left: 45%;
+}
+
+/* contact style */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+}
+
+.left-section {
+  flex: 1; /* اندازه مساوی برای هر دو بخش */
+  margin-right: 20px;
+}
+
+.paragraph {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.map {
+  width: 100%;
+  height: 350px; /* ارتفاع مناسب برای نقشه */
+  border-radius: 10px;
+  border: 2px solid #ddd;
+}
+
+.right-section {
+  flex: 1; /* اندازه مساوی برای بخش Contact Us */
+  margin-left: 20px;
+}
+
+.contact-info {
+  background-color: rgba(46, 145, 117, 0.5); /* سبز شیشه‌ای با شفافیت 50% */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* سایه */
+}
+
+.contact-info h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-info div {
+  margin-bottom: 15px;
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 50px;
+  padding-left: 20px;
+  color: #000;
+}
+
+.contact-info label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.contact-info p {
+  margin: 0;
+}
+
+.contact-info a {
+  color: black;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .map {
+    height: 250px;
+  }
+}
+
+/*footer style*/
+.footer {
+  background-color: #eeeeee;
+}
+
+.footer h4,
+.footer h5 {
+  font-weight: bold;
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+.footer i {
+  font-size: 18px;
+}
+
+.footer p {
+  font-size: 17px;
+  color: #acabab;
+}
+
+/* Style for the social icons tooltip */
+.social-icon {
+  position: relative;
+}
+
+.social-icon::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  display: none;
+}
+
+.social-icon:hover::before {
+  display: block;
+}
