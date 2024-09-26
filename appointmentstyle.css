@@ -18,6 +18,10 @@ body {
 .navbar-nav .nav-link.active {
   color: #2e9175;
 }
+nav img{
+  width: 70px;
+    height: 70px;
+}
 /* Show More buttun */
 #show-more {
   background-color: #2e9175;
