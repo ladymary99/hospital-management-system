@@ -5,6 +5,38 @@ body {
     height: 100vh;
     margin: 0;
 }
+.navbar-nav .nav-link {
+  color: black;
+}
+.glass-navbar {
+  background: rgba(225, 225, 225, 0.2);
+  backdrop-filter: blur(10px);
+}
+.navbar-nav .nav-link:hover {
+  color: #2e9175;
+}
+.navbar-nav .nav-link.active {
+  color: #2e9175;
+}
+/*services style*/
+
+.services-heading {
+  width: 400px;
+  margin-left: 5%;
+}
+/* Show More buttun */
+#show-more {
+  background-color: #2e9175;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+#show-more:hover {
+  background-color: #22b68c;
+  transform: scale(1.05);
+}
 .appointment-form {
   background: linear-gradient(to right, #55b1ab, #4e8f8b);
   font-family: kadwa;
@@ -253,6 +285,51 @@ body {
     .booking-slot {
       width: 100%;
     }
+      .footer {
+  background-color: #eeeeee;
+}
+
+.footer h4,
+.footer h5 {
+  font-weight: bold;
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+.footer i {
+  font-size: 18px;
+}
+
+.footer p {
+  font-size: 17px;
+  color: #acabab;
+}
+
+/* Style for the social icons tooltip */
+.social-icon {
+  position: relative;
+}
+
+.social-icon::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  display: none;
+}
+
+.social-icon:hover::before {
+  display: block;
+}
+
   }
   .selected {
     background-color: #55b1ab;
