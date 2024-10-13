@@ -65,7 +65,7 @@ body {
 }
 
 .left-section {
-  flex: 1; /* اندازه مساوی برای هر دو بخش */
+  flex: 1; 
   margin-right: 20px;
 }
 
@@ -79,22 +79,22 @@ body {
 
 .map {
   width: 100%;
-  height: 350px; /* ارتفاع مناسب برای نقشه */
+  height: 350px; 
   border-radius: 10px;
   border: 2px solid #ddd;
 }
 
 .right-section {
-  flex: 1; /* اندازه مساوی برای بخش Contact Us */
+  flex: 1;
   margin-left: 20px;
 }
 
 .contact-info {
-  background-color: rgba(46, 145, 117, 0.5); /* سبز شیشه‌ای با شفافیت 50% */
+  background-color: rgba(46, 145, 117, 0.5); 
   color: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* سایه */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .contact-info h2 {
