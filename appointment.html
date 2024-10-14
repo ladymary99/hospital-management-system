@@ -142,188 +142,223 @@ h4 {
     </nav>
     <!--navbar end-->
     <div>
-        <div> <h2>Appointment Booking</h2></div>
-        <div class="center">
-            <div class="line"></div>
-        </div> 
-      </div> 
-      <section class="d-flex justify-content-center">
+      <div>
+        <h2>Appointment Booking</h2>
+      </div>
+      <div class="center">
+        <div class="line"></div>
+      </div>
+    </div>
+  
+    <section class="d-flex justify-content-center">
       <div class="appointment-form">
         <h2>Appointment Form</h2>
-<div>
-           <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Enter your name">
-    </div>
- 
-<div>   <label for="lastname">Last Name</label>
-        <input type="text" id="lastname" placeholder="Enter your last name">
-    </div>
-     
-<div>        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter your email">
-    </div>
-
-
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name">
+        </div>
+  
+        <div>
+          <label for="lastname">Last Name</label>
+          <input type="text" id="lastname" placeholder="Enter your last name">
+        </div>
+  
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email">
+        </div>
+  
         <select id="doctor">
-            <option value="">choose a doctor</option>
-            <option value="cardiologist">Cardiologist-marya zulal</option>
-            <option value="dermatologist">Dermatologist-maryam ahmadi</option>
-            <option value="pediatrician">Pediatrician-nadiya noori</option>
-            <option value="orthopedic">Orthopedic-sahadat yaqubi</option>
+          <option value="">choose a doctor</option>
+          <option value="cardiologist">Cardiologist-marya zulal</option>
+          <option value="dermatologist">Dermatologist-maryam ahmadi</option>
+          <option value="pediatrician">Pediatrician-nadiya noori</option>
+          <option value="orthopedic">Orthopedic-sahadat yaqubi</option>
         </select>
-        
+  
         <div class="checkbox-container" style="display: flex; align-items: center;">
           <label for="remind" class="checkbox-label" style="margin-right: 10px;">Remind My Appointment</label>
           <input type="checkbox" id="remind" name="remind">
+        </div>
       </div>
-      </section>
-
-      <section>
-        <div> <h4 style="margin-top: 50px;
-        margin-bottom: 50px;">Choose a day</h4></div>
-       
-                <div class="calendar-container">
-                    <div class="calendar-header">
-                        <h2>Appointment Calendar</h2>
-                        <p id="current-month"></p>
-                    </div>
-                    <div class="calendar">
-                        <!-- Days of the week -->
-                        <div class="day-name">Sun</div>
-                        <div class="day-name">Mon</div>
-                        <div class="day-name">Tue</div>
-                        <div class="day-name">Wed</div>
-                        <div class="day-name">Thu</div>
-                        <div class="day-name">Fri</div>
-                        <div class="day-name">Sat</div>
-                    </div>
-            
-                    <div class="appointment-info">
-                        <p>Selected Date: <span id="selected-date">None</span></p>
-                    </div>
-                </div>
-            
-                <script>
-                    const calendarContainer = document.querySelector('.calendar');
-                    const currentMonth = document.getElementById('current-month');
-                    const selectedDateSpan = document.getElementById('selected-date');
-            
-                    let currentDate = new Date();
-            
-                    function renderCalendar() {
-                        calendarContainer.innerHTML = `
-                            <div class="day-name">Sun</div>
-                            <div class="day-name">Mon</div>
-                            <div class="day-name">Tue</div>
-                            <div class="day-name">Wed</div>
-                            <div class="day-name">Thu</div>
-                            <div class="day-name">Fri</div>
-                            <div class="day-name">Sat</div>
-                        `;
-            
-                        const month = currentDate.getMonth();
-                        const year = currentDate.getFullYear();
-                        const daysInMonth = new Date(year, month + 1, 0).getDate();
-                        const firstDayIndex = new Date(year, month, 1).getDay();
-            
-                        currentMonth.textContent = currentDate.toLocaleDateString('default', { month: 'long', year: 'numeric' });
-            
-                        for (let i = 0; i < firstDayIndex; i++) {
-                            const blankDiv = document.createElement('div');
-                            calendarContainer.appendChild(blankDiv);
-                        }
-            
-                        for (let day = 1; day <= daysInMonth; day++) {
-                            const dayDiv = document.createElement('div');
-                            dayDiv.textContent = day;
-            
-                            dayDiv.addEventListener('click', () => {
-                                const selectedDiv = document.querySelector('.calendar div.selected');
-                                if (selectedDiv) {
-                                    selectedDiv.classList.remove('selected');
-                                }
-            
-                                dayDiv.classList.add('selected');
-                                selectedDateSpan.textContent = `${day}/${month + 1}/${year}`;
-                            });
-            
-                            calendarContainer.appendChild(dayDiv);
-                        }
-                    }
-            
-                    renderCalendar();
-                </script>
-      </section>
-
-      <section>
-        <div>
-            <h4>Choose an hour</h4>
+    </section>
+  
+    <section>
+      <div>
+        <h4 style="margin-top: 50px; margin-bottom: 50px;">Choose a day</h4>
+      </div>
+      <div class="calendar-container">
+        <div class="calendar-header">
+          <h2>Appointment Calendar</h2>
+          <p id="current-month"></p>
         </div>
-        <div class="center">
-            <div class="line3"></div>
+        <div class="calendar">
+          <!-- Days of the week -->
+          <div class="day-name">Sun</div>
+          <div class="day-name">Mon</div>
+          <div class="day-name">Tue</div>
+          <div class="day-name">Wed</div>
+          <div class="day-name">Thu</div>
+          <div class="day-name">Fri</div>
+          <div class="day-name">Sat</div>
         </div>
-        <div class="time-appointment-container">
-            <div class="booking-grid">
-                <div class="booking-slot">
-                    <div class="icon">
-                        <img src="pictures/sunrise (1).png" alt="Morning Icon">
-                    </div>
-                    <p>Morning</p>
-                    <button class="time-slot">08:00-08:30</button>
-                    <button class="time-slot">08:30-09:00</button>
-                    <button class="time-slot">09:00-09:30</button>
-                    <button class="time-slot">09:30-10:00</button>
-                </div>
-
-                <div class="booking-slot">
-                    <div class="icon">
-                        <img src="pictures/weather.png" alt="Afternoon Icon">
-                    </div>
-                    <p>Afternoon</p>
-                    <button class="time-slot">13:00-13:30</button>
-                    <button class="time-slot">13:30-14:00</button>
-                    <button class="time-slot">14:00-14:30</button>
-                    <button class="time-slot">14:30-15:00</button>
-                </div>
-
-                <div class="booking-slot">
-                    <div class="icon">
-                        <img src="pictures/night-mode.png" alt="Evening Icon">
-                    </div>
-                    <p>Evening</p>
-                    <button class="time-slot">17:00-17:30</button>
-                    <button class="time-slot">17:30-18:00</button>
-                    <button class="time-slot">18:00-18:30</button>
-                    <button class="time-slot">18:30-19:00</button>
-                </div>
-            </div>
-            <button class="appointment-btn" id="book-btn" disabled>Book Appointment</button>
+  
+        <div class="appointment-info">
+          <p>Selected Date: <span id="selected-date">None</span></p>
         </div>
-        <script>
-          document.addEventListener('DOMContentLoaded', () => {
-        let selectedTime = null;
-        const timeButtons = document.querySelectorAll('.time-slot');
-        const bookButton = document.getElementById('book-btn');
-    
-        
-        timeButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                
-                timeButtons.forEach(btn => btn.classList.remove('selected'));
-    
-             
-                button.classList.add('selected');
-                selectedTime = button.textContent;
-                bookButton.disabled = false;
+      </div>
+  
+      <script>
+        const calendarContainer = document.querySelector('.calendar');
+        const currentMonth = document.getElementById('current-month');
+        const selectedDateSpan = document.getElementById('selected-date');
+        let currentDate = new Date();
+  
+        function renderCalendar() {
+          calendarContainer.innerHTML = `
+              <div class="day-name">Sun</div>
+              <div class="day-name">Mon</div>
+              <div class="day-name">Tue</div>
+              <div class="day-name">Wed</div>
+              <div class="day-name">Thu</div>
+              <div class="day-name">Fri</div>
+              <div class="day-name">Sat</div>
+          `;
+  
+          const month = currentDate.getMonth();
+          const year = currentDate.getFullYear();
+          const daysInMonth = new Date(year, month + 1, 0).getDate();
+          const firstDayIndex = new Date(year, month, 1).getDay();
+  
+          currentMonth.textContent = currentDate.toLocaleDateString('default', { month: 'long', year: 'numeric' });
+  
+          for (let i = 0; i < firstDayIndex; i++) {
+            const blankDiv = document.createElement('div');
+            calendarContainer.appendChild(blankDiv);
+          }
+  
+          for (let day = 1; day <= daysInMonth; day++) {
+            const dayDiv = document.createElement('div');
+            dayDiv.textContent = day;
+  
+            dayDiv.addEventListener('click', () => {
+              const selectedDiv = document.querySelector('.calendar div.selected');
+              if (selectedDiv) {
+                selectedDiv.classList.remove('selected');
+              }
+  
+              dayDiv.classList.add('selected');
+              selectedDateSpan.textContent = `${day}/${month + 1}/${year}`;
             });
-        });
-        bookButton.addEventListener('click', () => {
-            if (selectedTime) {
-                alert(`You have booked the appointment for: ${selectedTime}`);
-            }
-        });
+  
+            calendarContainer.appendChild(dayDiv);
+          }
+        }
+  
+        renderCalendar();
+      </script>
+    </section>
+  
+    <section>
+      <div>
+        <h4>Choose an hour</h4>
+      </div>
+      <div class="center">
+        <div class="line3"></div>
+      </div>
+      <div class="time-appointment-container">
+        <div class="booking-grid">
+          <div class="booking-slot">
+            <div class="icon">
+              <img src="sunrise (1).png" alt="Morning Icon">
+            </div>
+            <p>Morning</p>
+            <button class="time-slot">08:00-08:30</button>
+            <button class="time-slot">08:30-09:00</button>
+            <button class="time-slot">09:00-09:30</button>
+            <button class="time-slot">09:30-10:00</button>
+          </div>
+  
+          <div class="booking-slot">
+            <div class="icon">
+              <img src="weather.png" alt="Afternoon Icon">
+            </div>
+            <p>Afternoon</p>
+            <button class="time-slot">13:00-13:30</button>
+            <button class="time-slot">13:30-14:00</button>
+            <button class="time-slot">14:00-14:30</button>
+            <button class="time-slot">14:30-15:00</button>
+          </div>
+  
+          <div class="booking-slot">
+            <div class="icon">
+              <img src="night-mode.png" alt="Evening Icon">
+            </div>
+            <p>Evening</p>
+            <button class="time-slot">17:00-17:30</button>
+            <button class="time-slot">17:30-18:00</button>
+            <button class="time-slot">18:00-18:30</button>
+            <button class="time-slot">18:30-19:00</button>
+          </div>
+        </div>
+        <div id="selected-time-display">Selected Date: None</div>
+      </div>
+     
+      
+      <script>
+      document.addEventListener('DOMContentLoaded', () => {
+  let selectedTime = null;
+  const timeButtons = document.querySelectorAll('.time-slot');
+
+  timeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // حذف کلاس 'selected' از تمام دکمه‌ها
+      timeButtons.forEach(btn => btn.classList.remove('selected'));
+
+      // اضافه کردن کلاس 'selected' به دکمه کلیک‌شده
+      button.classList.add('selected');
+      selectedTime = button.textContent;
+
+      // نمایش انتخاب کاربر در چارت (نمایش زمان انتخاب‌شده)
+      document.getElementById('selected-time-display').textContent = `Selected time: ${selectedTime}`;
     });
-        </script>
+  });
+});
+
+      </script>
+    </section>
+  
+    <section class="confirmation-section">
+      <button class="confirm-btn" id="confirm-booking-btn">Confirm Booking</button>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const confirmBookingButton = document.getElementById('confirm-booking-btn');
+  
+          confirmBookingButton.addEventListener('click', () => {
+            const name = document.getElementById('name').value;
+            const lastName = document.getElementById('lastname').value;
+            const email = document.getElementById('email').value;
+            const doctor = document.getElementById('doctor').value;
+            const selectedDate = document.getElementById('selected-date').textContent;
+            const selectedTime = document.querySelector('.time-slot.selected') ? document.querySelector('.time-slot.selected').textContent : null;
+  
+            let missingFields = [];
+  
+            if (!name) missingFields.push('Name');
+            if (!lastName) missingFields.push('Last Name');
+            if (!email) missingFields.push('Email');
+            if (!doctor) missingFields.push('Doctor');
+            if (selectedDate === 'None') missingFields.push('Date');
+            if (!selectedTime) missingFields.push('Time');
+  
+            if (missingFields.length > 0) {
+              alert(`Please fill in the following fields: ${missingFields.join(', ')}`);
+            } else {
+              alert('You booked successfully!');
+            }
+          });
+        });
+      </script>
     </section>
    <!-- footer -->
     <footer class="footer pt-5">
