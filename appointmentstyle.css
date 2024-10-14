@@ -296,7 +296,33 @@ nav img{
   .appointment-btn:hover {
     background-color: #55b1ab;
   }
-  
+.time-slot.selected {
+  background-color: #55b1ab;  
+  color: white; 
+}
+
+ 
+.time-slot:hover {
+  background-color: #55b1ab;
+  color: white;
+}
+
+ 
+.time-slot.selected:hover {
+  background-color: #55b1ab; 
+  color: white;  
+}
+#selected-time-display {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  margin: 0 auto; 
+  font-family: kadwa;
+
+}
   @media (max-width: 768px) {
     .booking-grid {
       flex-direction: column; 
@@ -306,6 +332,8 @@ nav img{
     .booking-slot {
       width: 100%;
     }
+
+      
       .footer {
   background-color: #eeeeee;
 }
