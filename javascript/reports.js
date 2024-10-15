@@ -79,10 +79,10 @@ const myChart = new Chart(ctx, {
   },
 });
  function downloadFile() {
-      const linkInput = document.getElementById('linkInput').value;
+      const link = document.getElementById('link').value;
       const fileType = document.querySelector('input[name="fileType"]:checked').value;
 
-      if (!linkInput) {
+      if (!link) {
         alert('Please paste a valid link.');
         return;
       }
@@ -95,7 +95,7 @@ const myChart = new Chart(ctx, {
       }
 
       const link = document.createElement('a');
-      link.href = linkInput;
+      link.href = link;
       link.download = filename;
       document.body.appendChild(link);
       link.click();
