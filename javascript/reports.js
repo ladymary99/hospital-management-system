@@ -78,3 +78,26 @@ const myChart = new Chart(ctx, {
     },
   },
 });
+ function downloadFile() {
+      const linkInput = document.getElementById('linkInput').value;
+      const fileType = document.querySelector('input[name="fileType"]:checked').value;
+
+      if (!linkInput) {
+        alert('Please paste a valid link.');
+        return;
+      }
+
+      let filename = 'download';
+      if (fileType === 'pdf') {
+        filename += '.pdf';
+      } else {
+        filename += '.xlsx';
+      }
+
+      const link = document.createElement('a');
+      link.href = linkInput;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
