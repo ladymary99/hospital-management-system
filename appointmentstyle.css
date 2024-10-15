@@ -18,10 +18,10 @@ body {
 .navbar-nav .nav-link.active {
   color: #2e9175;
 }
-nav img{
+/* nav img{
   width: 70px;
     height: 70px;
-}
+} */
 /* Show More buttun */
 #show-more {
   background-color: #2e9175;
@@ -35,10 +35,10 @@ nav img{
   background-color: #22b68c;
   transform: scale(1.05);
 }
-/* .btn-success:hover {
+.btn-success:hover {
   background-color: #218838;
   border-color: #1e7e34;
-} */
+}
 /*services style*/
 
 /* .services-heading {
