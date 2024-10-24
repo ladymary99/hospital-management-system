@@ -6,7 +6,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url(../patientpage/bg.jpeg);
+  background-image: url(https://github.com/ladymary99/hospital-management-system/blob/main/patientpage/pictures/bg.jpeg);
+  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
