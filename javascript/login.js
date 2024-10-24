@@ -15,7 +15,18 @@ loginForm.addEventListener("submit", function (event) {
 
     // redirect to admin page
     window.location.href = "admin-dashboard.html";
-  } else {
+  } 
+  //new added code
+    // check user information for sahadatyaqubi
+else if (username === "sahadatyaqubi" && password === "1234") {
+    // login information saved successfully in localStorage
+    localStorage.setItem("loggedIn", "true");
+
+    // redirect to patient2 page
+    window.location.href = "patient2-index.html";
+}
+  
+  else {
     // show error message
     errorMessage.textContent = "username and password is not correct! ";
   }
