@@ -1,12 +1,3 @@
-// active iteams
-document.querySelectorAll(".dashboard-item").forEach((item) => {
-  item.addEventListener("click", function () {
-    document
-      .querySelectorAll(".dashboard-item")
-      .forEach((link) => link.classList.remove("active-item"));
-    this.classList.add("active-item");
-  });
-});
 
 // Gender Chart
 const genderCtx = document.getElementById("genderChart").getContext("2d");
@@ -79,25 +70,27 @@ const myChart = new Chart(ctx, {
   },
 });
  function downloadFile() {
-      const link = document.getElementById('link').value;
-      const fileType = document.querySelector('input[name="fileType"]:checked').value;
+  const linkInput = document.getElementById("linkInput").value.trim();
+  const format = document.querySelector('input[name="format"]:checked');
 
-      if (!link) {
-        alert('Please paste a valid link.');
-        return;
-      }
+  if (!linkInput) {
+    alert("Please paste the link.");
+    return;
+  }
 
-      let filename = 'download';
-      if (fileType === 'pdf') {
-        filename += '.pdf';
-      } else {
-        filename += '.xlsx';
-      }
+  if (!format) {
+    alert("Please select a format.");
+    return;
+  }
 
-      const link = document.createElement('a');
-      link.href = link;
-      link.download = filename;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
+  const fileType = format.value;
+  const downloadLink = `${linkInput}.${fileType}`;
+
+  
+  const a = document.createElement("a");
+  a.href = downloadLink;
+  a.download = `data.${fileType}`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
