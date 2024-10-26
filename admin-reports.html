@@ -167,6 +167,22 @@
                 <span>Settings</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a
+                href="LogIn-page.html"
+                class="nav-link dashboard-item d-flex align-items-center"
+                id="logout"
+              >
+                <img
+                  src="pictures/sign-out.svg"
+                  alt=""
+                  width="30px"
+                  height="30px"
+                />
+                <i class="fas fa-prescription-bottle-alt mx-2"></i>
+                <span>Log Out </span>
+              </a>
+            </li>
           </ul>
         </div>
         <!-- Main Content -->
@@ -392,11 +408,13 @@
             <h5 class="p-3">Data Export</h5>
             <form class="p-3">
               <div class="mb-3">
-                <label for="link" class="form-label" >Print Data as:</label>
+                <label class="form-label" for="linkInput"
+                  >Download Data as:</label
+                >
                 <input
                   type="text"
                   class="form-control"
-                  id="link"
+                  id="linkInput"
                   placeholder="Paste the link"
                 />
               </div>
@@ -418,7 +436,13 @@
                 />
                 <label class="form-check-label" for="excel">Excel</label>
               </div>
-              <button type="submit" class="btn btn-primary" onclick="downloadFile()">Print</button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="downloadFile()"
+              >
+                Download
+              </button>
             </form>
           </div>
         </main>
