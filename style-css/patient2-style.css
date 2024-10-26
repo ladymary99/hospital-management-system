@@ -154,10 +154,10 @@ body {
 }
 
 .custom-hr {
-  height: 5px; /* ضخامت خط */
-  background-color: black; /* رنگ خط */
-  border: none; /* حذف حاشیه */
-  margin: 0px 0; /* فاصله از بالا و پایین */
+  height: 5px; 
+  background-color: black; 
+  border: none; 
+  margin: 0px 0; 
 }
 /* information style */
 .services-grid {
@@ -170,19 +170,19 @@ body {
 }
 
 .service-box {
-  width: 200px; /* عرض اصلی دیو */
+  width: 200px;
   padding: 20px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.2); /* پس‌زمینه شیشه‌ای */
+  background: rgba(255, 255, 255, 0.2); 
   border: 1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px); /* فیلتر شیشه‌ای */
+  backdrop-filter: blur(10px);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 .service-box:hover {
-  transform: scale(1.05); /* انیمیشن تغییر سایز در هاور */
+  transform: scale(1.05); 
 }
 
 .service-box img {
@@ -207,13 +207,13 @@ body {
 /* Responsive styles */
 @media (max-width: 768px) {
   .service-box {
-    width: 100%; /* عرض دیوها در صفحه‌های کوچکتر */
-    max-width: 300px; /* حداکثر عرض برای جلوگیری از بزرگ شدن بیش از حد */
+    width: 100%; 
+    max-width: 300px;
   }
 }
 
 @media (max-width: 480px) {
   .service-box {
-    padding: 10px; /* کاهش padding در گوشی‌های کوچکتر */
+    padding: 10px;
   }
 }
