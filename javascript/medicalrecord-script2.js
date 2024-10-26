@@ -1,18 +1,18 @@
-// بارگذاری داده‌های فرم و جدول از localStorage در هنگام بارگذاری صفحه
+//showing the submited information
 window.onload = function () {
   loadFormData();
   loadDiagnosisData();
 };
 
-// ذخیره داده‌های فرم در localStorage
+// saving in local storage
 document
   .getElementById("medicalForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // جلوگیری از ارسال فرم
+    event.preventDefault(); 
     saveFormData();
   });
 
-// ذخیره داده‌ها در localStorage
+//function for saving in local
 function saveFormData() {
   const name = document.getElementById("name").value;
   const lastName = document.getElementById("lastName").value;
@@ -22,7 +22,7 @@ function saveFormData() {
   const email = document.getElementById("email").value;
   const phoneNumber = document.getElementById("phoneNumber").value;
 
-  // ذخیره‌سازی در localStorage
+  
   const medicalData = {
     name,
     lastName,
@@ -36,7 +36,7 @@ function saveFormData() {
   localStorage.setItem("medicalData", JSON.stringify(medicalData));
 }
 
-// بارگذاری داده‌های فرم از localStorage
+// loads the saved data
 function loadFormData() {
   const medicalData = JSON.parse(localStorage.getItem("medicalData"));
   if (medicalData) {
@@ -51,7 +51,7 @@ function loadFormData() {
   }
 }
 
-// اضافه کردن ردیف جدید به جدول تشخیص
+// add diagnosis
 const diagnosisTable = document
   .getElementById("diagnosisTable")
   .getElementsByTagName("tbody")[0];
@@ -69,7 +69,7 @@ addRowBtn.addEventListener("click", function () {
   treatmentCell.innerHTML = '<input type="text" name="treatment">';
 });
 
-// ذخیره داده‌های جدول در localStorage
+// add diagnisis saving
 function saveDiagnosisData() {
   const diagnosisRows = [];
   const rows = diagnosisTable.getElementsByTagName("tr");
@@ -87,7 +87,7 @@ function saveDiagnosisData() {
   localStorage.setItem("diagnosisData", JSON.stringify(diagnosisRows));
 }
 
-// بارگذاری داده‌های جدول از localStorage
+// loads the diagnosis from local 
 function loadDiagnosisData() {
   const diagnosisData = JSON.parse(localStorage.getItem("diagnosisData"));
   if (diagnosisData) {
