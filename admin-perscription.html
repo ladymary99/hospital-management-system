@@ -489,18 +489,32 @@
           <div class="chart1">
             <h3>Patient List</h3>
             <!-- Search Input -->
-            <div class="mb-3">
-              <input
+            <div class="mb-3 ">
+              <div class="d-flex">
+                <input
                 type="text"
                 id="searchInput"
                 class="form-control"
-                placeholder="Search staff..."
+                placeholder="Search patient by name..."
+                
               />
-            </div>
+              <button onclick="searchPatient()" style="border: solid gray 1px; background: none; border-radius: 5px;" class="d-flex">
+                <lord-icon
+                    src="https://cdn.lordicon.com/wjyqkiew.json"
+                    trigger="loop"
+                    delay="2000"
+                    stroke="bold"
+                    colors="primary:#121331,secondary:#000000"
+                    style="width:35px;height:35px">
+                </lord-icon></button>
+              </div>
+               <p id="result"></p>
 
+            </div>
             <table
               class="table table-bordered table-hover staff-list "
               id="staffTable"
+              id="emailTable"
             >
               <thead class="table-light">
                 <tr>
@@ -542,6 +556,7 @@
                         trigger="hover"
                         colors="primary:#e83a30,secondary:#e83a30"
                         style="width: 20px; height: 20px"
+                        class="deleteBtn"
                       >
                       </lord-icon>
                     </button>
@@ -584,6 +599,7 @@
                         trigger="hover"
                         colors="primary:#e83a30,secondary:#e83a30"
                         style="width: 20px; height: 20px"
+                        class="deleteBtn"
                       >
                       </lord-icon>
                     </button>
@@ -625,6 +641,7 @@
                         trigger="hover"
                         colors="primary:#e83a30,secondary:#e83a30"
                         style="width: 20px; height: 20px"
+                        class="deleteBtn"
                       >
                       </lord-icon>
                     </button>
@@ -666,6 +683,7 @@
                         trigger="hover"
                         colors="primary:#e83a30,secondary:#e83a30"
                         style="width: 20px; height: 20px"
+                        class="deleteBtn"
                       >
                       </lord-icon>
                     </button>
@@ -707,6 +725,7 @@
                         trigger="hover"
                         colors="primary:#e83a30,secondary:#e83a30"
                         style="width: 20px; height: 20px"
+                        class="deleteBtn"
                       >
                       </lord-icon>
                     </button>
@@ -746,6 +765,7 @@
                         trigger="hover"
                         colors="primary:#e83a30,secondary:#e83a30"
                         style="width: 20px; height: 20px"
+                        class="deleteBtn"
                       >
                       </lord-icon>
                     </button>
@@ -786,6 +806,7 @@
                         trigger="hover"
                         colors="primary:#e83a30,secondary:#e83a30"
                         style="width: 20px; height: 20px"
+                        class="deleteBtn"
                       >
                       </lord-icon>
                     </button>
@@ -826,6 +847,7 @@
                         trigger="hover"
                         colors="primary:#e83a30,secondary:#e83a30"
                         style="width: 20px; height: 20px"
+                        class="deleteBtn"
                       >
                       </lord-icon>
                     </button>
@@ -866,6 +888,7 @@
                         trigger="hover"
                         colors="primary:#e83a30,secondary:#e83a30"
                         style="width: 20px; height: 20px"
+                        class="deleteBtn"
                       >
                       </lord-icon>
                     </button>
