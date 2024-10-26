@@ -93,12 +93,17 @@ const config = {
 };
 var paymentsChart = new Chart(document.getElementById("paymentsChart"), config);
 // copy buttun
-function copyTable() {
-  var table = document.getElementById("summaryTable");
-  var range = document.createRange();
-  range.selectNode(table);
-  window.getSelection().removeAllRanges();
-  window.getSelection().addRange(range);
-  document.getSelection().removeAllRanges();
-  alert("payment Summary copied to clipboard!");
+function copySectionLink(sectionId) {
+  const baseUrl = window.location.origin + window.location.pathname;
+  const sectionLink = `${baseUrl}#${sectionId}`;
+
+  navigator.clipboard
+    .writeText(sectionLink)
+    .then(() => {
+      alert("Section link copied to clipboard!");
+    })
+    .catch((err) => {
+      console.error("Failed to copy: ", err);
+      alert("Copy failed. Please try again.");
+    });
 }
